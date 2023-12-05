@@ -1,5 +1,5 @@
 {
-  "name": "",
+  "name": "profil-c",
   "type": "module",
   "version": "0.0.1",
   "scripts": {
@@ -10,6 +10,10 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@fontsource/roboto": "^5.0.8",
     "astro": "^4.0.1"
+  },
+  "devDependencies": {
+    "sass": "^1.69.5"
   }
 }

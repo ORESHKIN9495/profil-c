@@ -1,0 +1,21 @@
+@import "./reset.scss";
+
+html {
+  scrollbar-color: var(--c-theme) white;
+  scrollbar-width: thin;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  line-height: 1.62;
+}
+
+.button {
+  background-color: var(--c-theme);
+  color: white;
+  display: block;
+  margin: 40px 0 0;
+  padding: 15px 30px;
+  width: fit-content;
+}
