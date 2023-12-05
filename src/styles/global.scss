@@ -1,4 +1,8 @@
-@import "./reset.scss";
+:root {
+  --c-theme: #2c80be;
+
+  --t-max-width: 1200px;
+}
 
 html {
   scrollbar-color: var(--c-theme) white;

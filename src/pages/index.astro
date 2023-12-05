@@ -1,19 +1,89 @@
 ---
-
+import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
-<html lang="ru">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<BaseLayout>
+  <section class="hero">
+    <article>
+      <h1>Мы поставляем трубы любого типоразмера</h1>
 
+      <p>
+        Благодаря налаженным связям с металлургическими заводами России,
+        Профиль-С имеет возможность осуществлять поставки по рыночным ценам, в
+        разумные сроки, в любой уголок РФ, минимальной партией от одной тонны.
+      </p>
 
-<style lang="scss"></style>
+      <a href="/catalog" class="button">Посмотреть каталог</a>
+    </article>
+
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      width="24"
+      viewBox="0 0 79 123"
+    >
+      <rect
+        id="mouse"
+        width="71"
+        height="115"
+        x="4"
+        y="4"
+        stroke="#ffffff80"
+        stroke-width="6"
+        rx="35.5"></rect>
+      <rect
+        width="12"
+        height="24"
+        x="34"
+        y="30"
+        fill="#ffffff80"
+        rx="6"
+        id="wheel"></rect>
+    </svg>
+  </section>
+</BaseLayout>
+
+<style lang="scss">
+  section {
+    background: url("/images/steel-pipes-in-the-factory.jpg") no-repeat center
+      center / cover;
+    color: white;
+    display: flex;
+    height: 100vh;
+
+    article {
+      margin: auto;
+      max-width: var(--t-max-width);
+      width: 100%;
+
+      h1 {
+        font-size: 48px;
+        line-height: 1.32;
+        margin: 0 0 10px;
+      }
+
+      p {
+        max-width: 720px;
+      }
+    }
+
+    svg {
+      position: absolute;
+      inset: auto 0 40px 0;
+      margin: auto;
+    }
+
+    @keyframes scroll {
+      0% {
+        transform: translateY(0);
+      }
+      30% {
+        transform: translateY(20px);
+      }
+    }
+
+    svg #wheel {
+      animation: scroll ease 1.5s infinite;
+    }
+  }
+</style>

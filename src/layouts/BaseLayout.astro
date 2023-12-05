@@ -1,3 +1,39 @@
 ---
 import '@fontsource/roboto/300.css';
+import FooterComponent from '../components/FooterComponent.astro';
+import HeaderComponent from '../components/HeaderComponent.astro';
+import '../styles/global.scss';
+import '../styles/reset.scss';
 ---
+
+
+<html lang="ru">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Профиль-Сталь | Профиль-Сталь</title>
+  </head>
+  <body>
+    <HeaderComponent />
+
+    <main>
+      <slot />
+    </main>
+
+    <FooterComponent />
+  </body>
+</html>
+
+<style lang="scss">
+    body {
+      background-color: crimson;
+    }
+  
+    main {
+      background-color: cadetblue;
+      margin: -92px 0 0;
+    }
+  </style>
