@@ -1,0 +1,34 @@
+---
+const { id, name, size } = Astro.props;
+---
+
+<article>
+  <article>
+    <a href="#">
+      <picture> </picture>
+    </a>
+    <p>
+      {name}
+    </p>
+  </article>
+</article>
+
+<style lang="scss">
+  article {
+    margin: 10px 0;
+
+    a {
+      picture {
+        background-color: var(--c-theme);
+        display: grid;
+        height: 150px;
+        place-content: center;
+        width: 150px;
+      }
+    }
+
+    p {
+      margin: 10px 0;
+    }
+  }
+</style>

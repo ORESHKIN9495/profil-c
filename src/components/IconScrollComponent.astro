@@ -1,0 +1,42 @@
+---
+
+---
+
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  fill="none"
+  width="24"
+  viewBox="0 0 79 123"
+>
+  <rect
+    width="71"
+    height="115"
+    x="4"
+    y="4"
+    stroke="#ffffff80"
+    stroke-width="6"
+    rx="35.5"></rect>
+  <rect width="12" height="24" x="34" y="30" fill="#ffffff80" rx="6" id="wheel"
+  ></rect>
+</svg>
+
+<style lang="scss">
+  svg {
+    position: absolute;
+    inset: auto 0 40px 0;
+    margin: auto;
+  }
+
+  @keyframes scroll {
+    0% {
+      transform: translateY(0);
+    }
+    30% {
+      transform: translateY(20px);
+    }
+  }
+
+  svg #wheel {
+    animation: scroll ease 1.5s infinite;
+  }
+</style>

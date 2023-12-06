@@ -1,0 +1,33 @@
+---
+const { head, icon, content } = Astro.props;
+---
+
+<article>
+  <h4>{head}</h4>
+
+  <svg>
+    <use xlink:href=`/images/sprites.svg#${icon}`></use>
+  </svg>
+
+  <p>
+    {content}
+  </p>
+</article>
+
+<style lang="scss">
+  article {
+    text-align: center;
+
+    h4 {
+      font-size: 18px;
+    }
+
+    svg {
+      background: var(--c-theme);
+      height: 150px;
+      margin: 20px 0;
+      padding: 40px;
+      width: 150px;
+    }
+  }
+</style>

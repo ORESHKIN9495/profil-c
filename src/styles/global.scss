@@ -10,6 +10,7 @@ html {
 }
 
 body {
+  color: #212427;
   font-family: "Roboto", sans-serif;
   font-weight: 300;
   line-height: 1.62;
@@ -22,4 +23,24 @@ body {
   margin: 40px 0 0;
   padding: 15px 30px;
   width: fit-content;
+  white-space: nowrap;
+}
+
+h1 {
+  font-size: 48px;
+  line-height: 1.32;
+  margin: 0 0 10px;
+}
+
+h3 {
+  font-size: 22px;
+  line-height: 1.32;
+  margin: 92px 0;
+  text-align: center;
+
+  &::before,
+  &::after {
+    content: "⎯⎯⎯⎯⎯⎯⎯";
+    margin: 0 20px;
+  }
 }
