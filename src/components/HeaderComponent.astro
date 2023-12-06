@@ -23,7 +23,7 @@ const links = [
 ];
 ---
 
-<header>
+<header id="header">
   <nav>
     <svg width="159" height="52">
       <use xlink:href="/images/sprites.svg#icon-profil-c"></use>
@@ -85,4 +85,21 @@ const links = [
       padding: 20px 0;
     }
   }
+
+  .shadow {
+    box-shadow: 0 8px 18px rgba(20, 31, 51, 0.4);
+  }
 </style>
+
+<script>
+  const hero = document.querySelector("#hero");
+  const header = document.querySelector("#header");
+
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > hero.getBoundingClientRect().bottom - 92) {
+      header.classList.add("shadow");
+    } else {
+      header.classList.remove("shadow");
+    }
+  });
+</script>
