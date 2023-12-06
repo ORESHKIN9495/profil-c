@@ -2,6 +2,7 @@
   --c-default: #212427;
   --c-inverted: white;
   --c-theme: #2c80be;
+  --c-secondary: #52a2db;
 
   --t-max-width: 1200px;
 }
@@ -19,7 +20,8 @@ body {
 }
 
 .button {
-  background-color: var(--c-theme);
+  background-color: var(--c-secondary);
+  border-radius: 25px;
   color: white;
   display: block;
   margin: 40px 0 0;

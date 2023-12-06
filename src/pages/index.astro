@@ -1,7 +1,6 @@
 ---
 import CardComponent from "../components/CardComponent.astro";
 import CardProductComponent from "../components/CardProductComponent.astro";
-import IconScrollComponent from "../components/IconScrollComponent.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
 
 const cards = [
@@ -128,6 +127,83 @@ const products = [
 <BaseLayout>
   <section class="hero">
     <article>
+      <!-- square -> triangle -> circle  -->
+      <svg
+        viewBox="0 0 100 100"
+        width="100px"
+        height="100px"
+        fill="none"
+        stroke-width="2"
+      >
+        <path>
+          <animate
+            attributeName="d"
+            dur="3000ms"
+            repeatCount="indefinite"
+            keyTimes="0;
+                 .0625;
+                 .3125;
+                 .395833333;
+                 .645833333;
+                 .833333333;
+                 1"
+            calcMode="spline"
+            keySplines="0,0,1,1;
+                   .42,0,1,1;
+                   0,0,.58,1;
+                   .42,0,.58,1;
+                   .42,0,.58,1;
+                   .42,0,.58,1"
+            values="M 0,0 C 50,0 50,0 100,0 100,50 100,50 100,100
+               50,100 50,100 0,100 0,50 0,50 0,0 Z;
+                     
+               M 0,0 C 50,0 50,0 100,0 100,50 100,50 100,100
+               50,100 50,100 0,100 0,50 0,50 0,0 Z; 
+
+               M 50,0 C 75,50 75,50 100,100 50,100 50,100 0,100
+               12.5,75 12.5,75 25,50 37.5,25 37.5,25 50,0 Z;
+
+               M 50,0 C 75,50 75,50 100,100 50,100 50,100 0,100
+               12.5,75 12.5,75 25,50 37.5,25 37.5,25 50,0 Z;
+
+               M 100,50 C 100,77.6 77.6,100 50,100 22.4,100 0,77.6
+               0,50 0,22.4 22.4,0 50,0 77.6,0 100,22.4 100,50 Z;
+                     
+               M 100,50 C 100,77.6 77.6,100 50,100 22.4,100 0,77.6 
+               0,50 0,22.4 22.4,0, 50,0 77.6,0 100,22.4 100,50 Z;
+                     
+               M 100,100 C 50,100 50,100 0,100 0,50 0,50 0,0
+               50,0 50,0 100,0 100,50 100,50 100,100 Z;"
+          ></animate>
+          <animate
+            attributeName="stroke"
+            dur="3000ms"
+            repeatCount="indefinite"
+            keyTimes="0;
+                 .0625;
+                 .3125;
+                 .395833333;
+                 .645833333;
+                 .833333333;
+                 1"
+            calcMode="spline"
+            keySplines="0,0,1,1;
+                   .42,0,1,1;
+                   0,0,.58,1;
+                   .42,0,.58,1;
+                   .42,0,.58,1;
+                   .42,0,.58,1"
+            values="#ffffff;
+               #ffffff;
+               #ffffff;
+               #ffffff;
+               #ffffff;
+               #ffffff;
+               #ffffff;"
+          ></animate>
+        </path>
+      </svg>
+
       <h1>Мы поставляем трубы любого типоразмера</h1>
 
       <p>
@@ -139,21 +215,11 @@ const products = [
       <a href="/catalog" class="button">Посмотреть каталог</a>
     </article>
 
-    <IconScrollComponent />
-  </section>
-
-  <h3>Почему стоит выбирать нас?</h3>
-
-  <section class="why-we-are">
-    {
-      cards.map((card) => (
-        <CardComponent
-          head={card.head}
-          icon={card.icon}
-          content={card.content}
-        />
-      ))
-    }
+    <article>
+      <svg height="42" width="27">
+        <use xlink:href="/images/sprites.svg#icon-scroll"></use>
+      </svg>
+    </article>
   </section>
 
   <h3>Наша процукция</h3>
@@ -173,6 +239,20 @@ const products = [
     </div>
 
     <a href="/catalog" class="button">Посмотреть каталог</a>
+  </section>
+
+  <h3>Почему стоит выбирать нас?</h3>
+
+  <section class="why-we-are">
+    {
+      cards.map((card) => (
+        <CardComponent
+          head={card.head}
+          icon={card.icon}
+          content={card.content}
+        />
+      ))
+    }
   </section>
 
   <h3>Выбирайте лучшее</h3>
@@ -330,20 +410,28 @@ const products = [
   }
 
   .hero {
-    background: url("/images/steel-pipes-in-the-factory.jpg") no-repeat center
-      center / cover;
+    background-color: var(--c-theme);
     color: white;
     height: 100vh;
-    max-width: unset;
+    max-width: 100%;
+
+    svg {
+      overflow: visible;
+    }
 
     article {
-      margin: auto;
+      margin: auto auto 0;
       max-width: var(--t-max-width);
+      padding: 92px 0 0;
       width: 100%;
 
       p {
         max-width: 720px;
       }
+    }
+
+    svg {
+      margin: auto 0 40px;
     }
   }
 
@@ -360,6 +448,7 @@ const products = [
       overflow: auto;
       scrollbar-color: darkgrey #ffffff;
       scrollbar-width: thin;
+      padding: 0 0 40px;
     }
 
     .button {

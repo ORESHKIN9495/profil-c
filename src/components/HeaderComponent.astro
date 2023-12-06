@@ -26,7 +26,7 @@ const links = [
 <header>
   <nav>
     <svg width="159" height="52">
-      <use xlink:href="/images/sprites.svg#logo"></use>
+      <use xlink:href="/images/sprites.svg#icon-profil-c"></use>
     </svg>
 
     <ul>
@@ -37,6 +37,7 @@ const links = [
           </li>
         ))
       }
+      <li>+7 8442 91 11 99</li>
     </ul>
   </nav>
 </header>
@@ -53,7 +54,8 @@ const links = [
 
       ul {
         display: flex;
-        margin: auto 0 6px auto;
+        margin: auto 0 2px auto;
+        place-items: baseline;
 
         li {
           a {
@@ -63,6 +65,12 @@ const links = [
               background-color: var(--c-theme);
               color: white;
             }
+          }
+
+          &:last-child {
+            font-size: 18px;
+            font-weight: 400;
+            margin: 0 0 0 60px;
           }
         }
       }
