@@ -92,11 +92,11 @@ const links = [
 </style>
 
 <script>
-  const hero = document.querySelector("#hero");
+  const products = document.querySelector("#products");
   const header = document.querySelector("#header");
 
   window.addEventListener("scroll", () => {
-    if (window.scrollY > hero.getBoundingClientRect().bottom - 92) {
+    if (products.getBoundingClientRect().top < header.getBoundingClientRect().bottom) {
       header.classList.add("shadow");
     } else {
       header.classList.remove("shadow");
