@@ -49,4 +49,33 @@
         <rect width="2" height="5" x="7" y="5" fill="currentColor" rx="1"/>
     </symbol>
 
+    <symbol id="icon-rigth-corner" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 16">
+        <path fill="currentColor" d="M14 13.5a.5.5 0 0 1-.5.5h-6a.5.5 0 0 1 0-1h4.793L2.146 2.854a.5.5 0 1 1 .708-.708L13 12.293V7.5a.5.5 0 0 1 1 0z"/>
+    </symbol>
+
+    <symbol id="icon-square" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect fill="none" x="1" y="1" width="22" height="22" stroke="currentColor" stroke-width="2"/>
+    </symbol>
+
+    <symbol id="icon-rectangle" viewBox="0 0 48 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect fill="none" x="1" y="1" width="46" height="22" stroke="currentColor" stroke-width="2"/>
+    </symbol>
+
+    <symbol id="icon-circle" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle fill="none" cx="12" cy="12" r="11" stroke="currentColor" stroke-width="2"/>
+    </symbol>
+
+    <symbol id="icon-circle-v2" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect fill="none" x="1" y="1" width="22" height="22" rx="11" stroke="currentColor" stroke-width="2"/>
+        <path d="M4.57386 15V9.18182H6.80114C7.22159 9.18182 7.57102 9.24811 7.84943 9.38068C8.12973 9.51136 8.33902 9.69034 8.47727 9.91761C8.61742 10.1449 8.6875 10.4025 8.6875 10.6903C8.6875 10.9271 8.64205 11.1297 8.55114 11.2983C8.46023 11.465 8.33807 11.6004 8.18466 11.7045C8.03125 11.8087 7.85985 11.8835 7.67045 11.929V11.9858C7.87689 11.9972 8.07481 12.0606 8.2642 12.1761C8.45549 12.2898 8.61174 12.4508 8.73295 12.6591C8.85417 12.8674 8.91477 13.1193 8.91477 13.4148C8.91477 13.7159 8.84186 13.9867 8.69602 14.2273C8.55019 14.4659 8.33049 14.6544 8.03693 14.7926C7.74337 14.9309 7.37405 15 6.92898 15H4.57386ZM5.62784 14.1193H6.76136C7.14394 14.1193 7.41951 14.0464 7.58807 13.9006C7.75852 13.7528 7.84375 13.5634 7.84375 13.3324C7.84375 13.16 7.80114 13.0047 7.71591 12.8665C7.63068 12.7263 7.50947 12.6165 7.35227 12.5369C7.19508 12.4555 7.00758 12.4148 6.78977 12.4148H5.62784V14.1193ZM5.62784 11.6562H6.67045C6.85227 11.6562 7.0161 11.6231 7.16193 11.5568C7.30777 11.4886 7.42235 11.393 7.50568 11.2699C7.59091 11.1449 7.63352 10.9972 7.63352 10.8267C7.63352 10.6013 7.55398 10.4157 7.39489 10.2699C7.23769 10.1241 7.00379 10.0511 6.69318 10.0511H5.62784V11.6562ZM13.5732 9.18182V10.0653H10.8857V15H9.83168V9.18182H13.5732ZM19.2116 9.18182V15H18.1662V10.0568H15.6207V15H14.5753V9.18182H19.2116Z" fill="currentColor"/>
+    </symbol>
+
+    <symbol id="icon-rectangle-rounded" viewBox="0 0 48 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect fill="none" x="1" y="1" width="46" height="22" rx="9" stroke="currentColor" stroke-width="2"/>
+    </symbol>
+
+    <symbol id="icon-elipse" viewBox="0 0 48 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill="none" d="M47 12C47 14.7309 44.7602 17.4724 40.5233 19.5909C36.3463 21.6794 30.5058 23 24 23C17.4942 23 11.6537 21.6794 7.47665 19.5909C3.23981 17.4724 1 14.7309 1 12C1 9.26912 3.23981 6.52757 7.47665 4.40915C11.6537 2.32063 17.4942 1 24 1C30.5058 1 36.3463 2.32063 40.5233 4.40915C44.7602 6.52757 47 9.26912 47 12Z" stroke="currentColor" stroke-width="2"/>
+    </symbol>
+
 </svg>

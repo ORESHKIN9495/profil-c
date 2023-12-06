@@ -21,7 +21,7 @@ body {
 
 .button {
   background-color: var(--c-secondary);
-  border-radius: 25px;
+  border-radius: 50px;
   color: white;
   display: block;
   margin: 40px 0 0;
@@ -30,33 +30,31 @@ body {
   white-space: nowrap;
 }
 
-h1 {
-  font-size: 48px;
+h1,
+h2,
+h3,
+h4 {
   line-height: 1.32;
   margin: 0 0 10px;
+}
+
+h1 {
+  font-size: 48px;
 }
 
 h2 {
-  font-size: 28px;
-  line-height: 1.32;
-  margin: 0 0 10px;
+  font-size: 42px;
 }
 
 h3 {
-  font-size: 22px;
-  line-height: 1.32;
-  margin: 92px 0;
-  text-align: center;
-
-  &::before,
-  &::after {
-    content: "⎯⎯⎯⎯⎯⎯⎯";
-    margin: 0 20px;
-  }
+  font-size: 36px;
 }
 
 h4 {
   font-size: 22px;
-  line-height: 1.32;
-  margin: 20px 0;
+}
+
+section {
+  background-color: white;
+  position: relative;
 }

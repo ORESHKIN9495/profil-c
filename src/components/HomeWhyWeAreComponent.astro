@@ -1,0 +1,51 @@
+---
+import CardComponent from "../components/CardComponent.astro";
+
+const cards = [
+  {
+    head: "Доставка по РФ",
+    icon: "icon-map",
+    content: "Благодаря налаженной транспортной сети, мы готовы доставить продукцию в любой регион России.",
+  },
+  {
+    head: "13 лет на рынке",
+    icon: "icon-13",
+    content: "Компания 'Профиль-С' уже более 13 лет занимается поставками стальных труб.",
+  },
+  {
+    head: "Контроль качества",
+    icon: "icon-iso",
+    content: "Мы следим за качеством продукции. От производителя, до отгрузки нашим клиентам.",
+  },
+  {
+    head: "Режим работы 24/7",
+    icon: "icon-work",
+    content: "Мы понимаем, как иногда важно получить груз в кратчайшие сроки не дожидаясь окончания выходных.",
+  },
+];
+---
+
+<section>
+  <h3>Почему стоит выбирать нас?</h3>
+
+  <div>
+    {cards.map((card) => <CardComponent head={card.head} icon={card.icon} content={card.content} />)}
+  </div>
+</section>
+
+<style lang="scss">
+  section {
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+    padding: 100px 0;
+
+    h3 {
+      margin: auto;
+    }
+
+    div {
+      display: inherit;
+    }
+  }
+</style>

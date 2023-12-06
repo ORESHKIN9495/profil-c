@@ -44,7 +44,11 @@ const links = [
 
 <style lang="scss">
   header {
+    background-color: var(--c-theme);
     color: var(--c-inverted);
+    position: sticky;
+    top: 0;
+    z-index: 9;
 
     nav {
       display: flex;
@@ -54,15 +58,16 @@ const links = [
 
       ul {
         display: flex;
+        gap: 40px;
         margin: auto 0 2px auto;
         place-items: baseline;
 
         li {
           a {
-            padding: 20px;
-
+            padding: 0 0 5px;
             &:hover {
               background-color: var(--c-theme);
+              border-bottom: 2px solid;
               color: white;
             }
           }

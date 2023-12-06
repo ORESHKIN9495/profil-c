@@ -1,0 +1,93 @@
+---
+
+---
+
+<section>
+  <h3>Весометрика</h3>
+
+  <nav>
+    <svg>
+      <use xlink:href="/images/sprites.svg#icon-elipse"></use>
+    </svg>
+
+    <svg>
+      <use xlink:href="/images/sprites.svg#icon-circle"></use>
+    </svg>
+
+    <svg>
+      <use xlink:href="/images/sprites.svg#icon-square"></use>
+    </svg>
+
+    <svg>
+      <use xlink:href="/images/sprites.svg#icon-rectangle"></use>
+    </svg>
+
+    <svg>
+      <use xlink:href="/images/sprites.svg#icon-circle-v2"></use>
+    </svg>
+
+    <svg>
+      <use xlink:href="/images/sprites.svg#icon-rectangle-rounded"></use>
+    </svg>
+  </nav>
+
+  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+    <thead>
+      <tr>
+        <td rowspan="3">Типоразмер, мм</td>
+        <td colspan="2">Толщина стенки, мм</td>
+      </tr>
+      <tr>
+        <td>1,2</td>
+        <td>1,5</td>
+      </tr>
+      <tr>
+        <td colspan="2">Масса 1 п/м, кг</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>30x16</td>
+        <td>0,666</td>
+        <td>0,821</td>
+      </tr>
+      <tr>
+        <td>40x20</td>
+        <td>0,885</td>
+        <td>0,936</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<style lang="scss">
+  section {
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+    padding: 100px 0;
+
+    nav {
+      display: inherit;
+      place-content: space-between;
+    }
+
+    table {
+      border-spacing: 0;
+      border-collapse: collapse;
+      width: 100%;
+
+      thead {
+        background: #eeeeee;
+      }
+      tbody tr:nth-child(2n) {
+        background: #eee;
+      }
+      td {
+        border: 2px solid white;
+        padding: 0 20px;
+        vertical-align: middle;
+      }
+    }
+  }
+</style>
