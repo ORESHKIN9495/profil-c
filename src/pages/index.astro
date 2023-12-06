@@ -15,10 +15,8 @@ import BaseLayout from "../layouts/BaseLayout.astro";
   <HomeWhyWeAreComponent />
 
   <section>
-    <h3>Выбирайте лучшее</h3>
-
     <article>
-      <h2>Профиль-C: Стальные трубы для вашего бизнеса</h2>
+      <h2>Стальные трубы для вашего бизнеса</h2>
       <p>
         Количество организаций, предлагающих стальные трубы, неизменно увеличивается, а потому потребителям все сложнее
         выбрать поставщика, ведь, на первый взгляд, все игроки на рынке металлопроката предлагают схожие условия. Однако
@@ -34,4 +32,13 @@ import BaseLayout from "../layouts/BaseLayout.astro";
   <HomeHeightMetricsComponent />
 </BaseLayout>
 
-<style lang="scss"></style>
+<style lang="scss">
+  section {
+    padding: 100px 0;
+
+    article {
+      margin: auto;
+      max-width: var(--t-max-width);
+    }
+  }
+</style>

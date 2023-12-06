@@ -5,59 +5,61 @@
 <section>
   <h3>Весометрика</h3>
 
-  <nav>
-    <svg>
-      <use xlink:href="/images/sprites.svg#icon-elipse"></use>
-    </svg>
+  <div>
+    <nav>
+      <svg width="80">
+        <use xlink:href="/images/sprites.svg#icon-elipse"></use>
+      </svg>
 
-    <svg>
-      <use xlink:href="/images/sprites.svg#icon-circle"></use>
-    </svg>
+      <svg width="80">
+        <use xlink:href="/images/sprites.svg#icon-circle"></use>
+      </svg>
 
-    <svg>
-      <use xlink:href="/images/sprites.svg#icon-square"></use>
-    </svg>
+      <svg width="80">
+        <use xlink:href="/images/sprites.svg#icon-square"></use>
+      </svg>
 
-    <svg>
-      <use xlink:href="/images/sprites.svg#icon-rectangle"></use>
-    </svg>
+      <svg width="80">
+        <use xlink:href="/images/sprites.svg#icon-rectangle"></use>
+      </svg>
 
-    <svg>
-      <use xlink:href="/images/sprites.svg#icon-circle-v2"></use>
-    </svg>
+      <svg width="80">
+        <use xlink:href="/images/sprites.svg#icon-circle-v2"></use>
+      </svg>
 
-    <svg>
-      <use xlink:href="/images/sprites.svg#icon-rectangle-rounded"></use>
-    </svg>
-  </nav>
+      <svg width="80">
+        <use xlink:href="/images/sprites.svg#icon-rectangle-rounded"></use>
+      </svg>
+    </nav>
 
-  <table width="100%" border="0" cellspacing="0" cellpadding="0">
-    <thead>
-      <tr>
-        <td rowspan="3">Типоразмер, мм</td>
-        <td colspan="2">Толщина стенки, мм</td>
-      </tr>
-      <tr>
-        <td>1,2</td>
-        <td>1,5</td>
-      </tr>
-      <tr>
-        <td colspan="2">Масса 1 п/м, кг</td>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>30x16</td>
-        <td>0,666</td>
-        <td>0,821</td>
-      </tr>
-      <tr>
-        <td>40x20</td>
-        <td>0,885</td>
-        <td>0,936</td>
-      </tr>
-    </tbody>
-  </table>
+    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <thead>
+        <tr>
+          <td rowspan="3">Типоразмер, мм</td>
+          <td colspan="2">Толщина стенки, мм</td>
+        </tr>
+        <tr>
+          <td>1,2</td>
+          <td>1,5</td>
+        </tr>
+        <tr>
+          <td colspan="2">Масса 1 п/м, кг</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>30x16</td>
+          <td>0,666</td>
+          <td>0,821</td>
+        </tr>
+        <tr>
+          <td>40x20</td>
+          <td>0,885</td>
+          <td>0,936</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 </section>
 
 <style lang="scss">
@@ -67,26 +69,48 @@
     gap: 80px;
     padding: 100px 0;
 
-    nav {
-      display: inherit;
-      place-content: space-between;
+    h3 {
+      margin: auto;
     }
 
-    table {
-      border-spacing: 0;
-      border-collapse: collapse;
+    div {
+      display: flex;
+      flex-direction: column;
+      gap: 80px;
+      margin: auto;
+      max-width: var(--t-max-width);
       width: 100%;
 
-      thead {
-        background: #eeeeee;
-      }
-      tbody tr:nth-child(2n) {
-        background: #eee;
-      }
-      td {
-        border: 2px solid white;
+      nav {
+        background: #f9f9f9;
+        border-radius: 25px;
+        box-shadow: 0 5px 5px rgba(20, 31, 51, 0.06);
+        display: inherit;
         padding: 0 20px;
-        vertical-align: middle;
+        place-content: space-between;
+
+        svg {
+          color: var(--c-theme);
+          overflow: visible;
+        }
+      }
+
+      table {
+        border-spacing: 0;
+        border-collapse: collapse;
+        width: 100%;
+
+        thead {
+          background: #f9f9f9;
+        }
+        tbody tr:nth-child(2n) {
+          background: #eee;
+        }
+        td {
+          padding: 10px 20px;
+          border: 2px solid white;
+          vertical-align: middle;
+        }
       }
     }
   }
