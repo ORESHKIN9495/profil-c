@@ -112,18 +112,166 @@ const products = [
   <h3>Наша процукция</h3>
 
   <section class="our-products">
-    {
-      products.map((product) => (
-        <CardProductComponent
-          id={product.id}
-          name={product.name}
-          size={product.size}
-        />
-      ))
-    }
+    <div>
+      {
+        products.map((product) => (
+          <CardProductComponent
+            id={product.id}
+            name={product.name}
+            size={product.size}
+          />
+        ))
+      }
+    </div>
+
+    <a href="/catalog" class="button">Посмотреть каталог</a>
   </section>
 
-  <a href="/catalog" class="button">Посмотреть каталог</a>
+  <h3>Выбирайте лучшее</h3>
+
+  <section class="about">
+    <article>
+      <h2>Профиль-C: Стальные трубы для вашего бизнеса</h2>
+      <p>
+        Количество организаций, предлагающих стальные трубы, неизменно
+        увеличивается, а потому потребителям все сложнее выбрать поставщика,
+        ведь, на первый взгляд, все игроки на рынке металлопроката предлагают
+        схожие условия. Однако волгоградская компания «Профиль-С выделяется на
+        фоне других торгующих фирм. Чем? Прежде всего, подходом к клиенту и
+        торговыми условиями. Приоритетными для нее является качество
+        поставляемой трубной продукции, забота о выгоде клиента и абсолютная
+        прозрачность в партнерских отношениях с заказчиком.
+      </p>
+    </article>
+  </section>
+
+  <section class="features">
+    <h4>Купить профильные трубы выгодно</h4>
+
+    <article>
+      <svg>
+        <use xlink:href="/images/sprites.svg#icon-free"></use>
+      </svg>
+
+      <p>
+        Привлекательная для покупателей модная тенденция на рынке металлопроката
+        - предлагать поставить профильные трубы с отсрочкой платежа, т.е. без
+        денег – имеет свои подводные камни. Помните, в таком случае в Вашу цену
+        обязательно будет заложен банковский процент поставщика. Мы работаем
+        открыто – Вы платите за продукцию ее цену без дополнительных процентов.
+        И это по-настоящему выгодно! Для любого производителя и строителя важны
+        сроки. Одним из приоритетов компании «Профиль-С является точное
+        соблюдение условий и сроков поставок. При покупке продукции без денег
+        поставщики могут привезти ее тогда, когда будет удобно им. Не заплатив,
+        Вы не сможете даже предъявить претензий.
+      </p>
+    </article>
+
+    <article>
+      <p>
+        Купив круглые, прямоугольные или квадратные трубы у нас, Вы
+        гарантированно получите заказ в течение недели. Получив электросварные
+        трубы без денег, Вы не можете требовать идеального качества привезенной
+        продукции, и поставщики часто пользуются этим. Компания «Профиль-С
+        работает на рынке уже около 10 лет и выстраивает свое дальнейшее
+        развитие на многие десятилетия вперед. Нам важна репутация. Поэтому мы
+        поставляем только продукцию высокого качества. Тонкостенные трубы,
+        которые мы предлагаем, производятся на высокотехнологичном итальянском и
+        корейском оборудовании. Это могут быть круглые трубы или изделия любого
+        другого профиля.
+      </p>
+
+      <svg>
+        <use xlink:href="/images/sprites.svg#icon-percent"></use>
+      </svg>
+    </article>
+
+    <h4>Трубы – Волгоград - Профиль-С</h4>
+
+    <article>
+      <p>
+        «Профиль-С продаст Вам трубы (Волгоград) именно в том количестве,
+        которое Вы готовы купить. Поставщики, завлекающие Вас скидкой в цене при
+        бòльшем объеме заказа, стремятся продать любыми способами, а Вы при этом
+        теряете на избытке закупленной продукции не несколько тысяч, а гораздо
+        больше. Мы не навязываем лишних объемов, а продаем столько, сколько
+        нужно Вам! Пару слов о длине… Заказ труб специальной длины – той которая
+        нужна для вашего производства - позволяет КОЛОССАЛЬНО сэкономить. Вы не
+        будете терять деньги на обрезь трубной продукции, на дополнительные
+        затраты времени и рабочей силы. Компания «Профиль-С принимает заказы на
+        прямоугольные трубы или продукцию другого сечения такой длины, которая
+        Вас требуется.
+      </p>
+
+      <svg>
+        <use xlink:href="/images/sprites.svg#icon-sign"></use>
+      </svg>
+    </article>
+
+    <article>
+      <svg>
+        <use xlink:href="/images/sprites.svg#icon-truck"></use>
+      </svg>
+
+      <p>
+        Важно то, что это не сделает Ваш заказ дороже – мы готовы предоставить
+        Вам такой бонус, потому что заботимся о наших клиентах, понимая, что от
+        их процветания зависит и наше будущее. Многие заказчики уже стали нашими
+        постоянными партнерами. И главное - наличие товара. Благодаря
+        выверенной, грамотной работе наших менеджеров Вам не нужно будет
+        заниматься поиском товара. Нужная вам труба оцинкованная или обычная
+        стальная электросварная будет всегда в наличии. Заказав продукцию в
+        прокат, Вы сможете бесплатно хранить ее на крытом складе «Профиль-С
+        столько, сколько нужно, будучи уверенными, что она содержится в
+        идеальных условиях, необходимых для такого товара, как тонкостенная
+        труба. Мы заботимся о Вас, чтобы процветать в будущем, и потому мы
+        работаем хорошо.
+      </p>
+    </article>
+  </section>
+
+  <h3>Весометрика</h3>
+
+  <section class="tables">
+    <nav>
+      <ul>
+        <li class="oval"></li>
+        <li class="circle"></li>
+        <li class="square"></li>
+        <li class="rectangle"></li>
+        <li class="circle-v2"></li>
+        <li class="rectangle-v2"></li>
+      </ul>
+    </nav>
+
+    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <thead>
+        <tr>
+          <td rowspan="3">Типоразмер, мм</td>
+          <td colspan="2">Толщина стенки, мм</td>
+        </tr>
+        <tr>
+          <td>1,2</td>
+          <td>1,5</td>
+        </tr>
+        <tr>
+          <td colspan="2">Масса 1 п/м, кг</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>30x16</td>
+          <td>0,666</td>
+          <td>0,821</td>
+        </tr>
+        <tr>
+          <td>40x20</td>
+          <td>0,885</td>
+          <td>0,936</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
 </BaseLayout>
 
 <style lang="scss">
@@ -157,14 +305,149 @@ const products = [
   }
 
   .our-products {
-    display: flex;
-    gap: 40px;
-    overflow: auto;
-    scrollbar-color: darkgrey #ffffff;
-    scrollbar-width: thin;
+    div {
+      display: flex;
+      gap: 40px;
+      overflow: auto;
+      scrollbar-color: darkgrey #ffffff;
+      scrollbar-width: thin;
+    }
+
+    .button {
+      margin: 100px auto;
+    }
   }
 
-  .button {
-    margin: 100px auto;
+  .features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    line-height: 1.32;
+    margin: auto;
+    max-width: var(--t-max-width);
+
+    h3 {
+      flex: 100%;
+      font-size: 22px;
+      font-weight: inherit;
+      text-transform: uppercase;
+    }
+
+    article {
+      display: flex;
+      flex: 100%;
+      flex-wrap: wrap;
+      gap: 40px;
+
+      svg {
+        height: 150px;
+        padding: 40px;
+        width: 150px;
+      }
+
+      p {
+        flex: 1;
+      }
+    }
+  }
+
+  .tables {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin: auto;
+    max-width: var(--t-max-width);
+
+    h3 {
+      flex: 100%;
+      font-size: 22px;
+      font-weight: inherit;
+      line-height: 1.32;
+      text-align: center;
+      text-transform: uppercase;
+      margin: 92px 0 92px;
+
+      &::after {
+        content: "⎯⎯⎯⎯⎯⎯⎯";
+        margin: 0 0 0 20px;
+      }
+
+      &::before {
+        content: "⎯⎯⎯⎯⎯⎯⎯";
+        margin: 0 20px 0 0;
+      }
+    }
+
+    nav {
+      width: 100%;
+
+      ul {
+        display: flex;
+        gap: 40px;
+        place-content: space-between;
+
+        li {
+          list-style: none;
+
+          &.oval {
+            border: 5px solid var(--c-theme);
+            border-radius: 50%;
+            height: 60px;
+            width: 100px;
+          }
+
+          &.circle {
+            border: 5px solid var(--c-theme);
+            border-radius: 50%;
+            height: 60px;
+            width: 60px;
+          }
+
+          &.square {
+            border: 5px solid var(--c-theme);
+            height: 60px;
+            width: 60px;
+          }
+
+          &.rectangle {
+            border: 5px solid var(--c-theme);
+            height: 60px;
+            width: 100px;
+          }
+
+          &.circle-v2 {
+            border: 5px solid var(--c-theme);
+            border-radius: 50%;
+            height: 60px;
+            width: 60px;
+          }
+
+          &.rectangle-v2 {
+            border: 5px solid var(--c-theme);
+            border-radius: 25px;
+            height: 60px;
+            width: 100px;
+          }
+        }
+      }
+    }
+
+    table {
+      border-spacing: 0;
+      border-collapse: collapse;
+      width: 100%;
+
+      thead {
+        background: #eeeeee;
+      }
+      tbody tr:nth-child(2n) {
+        background: #eee;
+      }
+      td {
+        border: 2px solid #fff;
+        padding: 0 20px;
+        vertical-align: middle;
+      }
+    }
   }
 </style>
