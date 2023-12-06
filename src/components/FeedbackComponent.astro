@@ -1,0 +1,52 @@
+---
+
+---
+
+<form>
+  <label>
+    <input type="text" placeholder="Ваше имя" />
+  </label>
+
+  <label>
+    <input type="text" placeholder="Ваш e-mail" />
+  </label>
+
+  <label>
+    <textarea cols="30" rows="10" placeholder="Ваше сообщение"></textarea>
+  </label>
+
+  <button class="button">Отправить</button>
+</form>
+
+<style lang="scss">
+  form {
+    display: grid;
+    gap: 40px;
+    grid-template: auto / repeat(2, 1fr);
+    grid-column: 1 / -1;
+
+    label {
+      input,
+      textarea {
+        background-color: #e4e4e4;
+        padding: 10px;
+        width: 100%;
+      }
+
+      &:last-of-type {
+        grid-column: 1 / -1;
+      }
+    }
+
+    @media only screen and (max-width: 720px) {
+      grid-template: auto / 1fr;
+      grid-column: auto;
+
+      label {
+        &:last-of-type {
+          grid-column: auto;
+        }
+      }
+    }
+  }
+</style>

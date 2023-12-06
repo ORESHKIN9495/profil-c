@@ -1,0 +1,96 @@
+---
+import FeedbackComponent from "../components/FeedbackComponent.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout>
+  <section>
+    <h1>Контакты</h1>
+
+    <ul>
+      <li>400075 г. Волгоград, ул. Краснополянская,72Д</li>
+
+      <li>
+        Адрес электронной почты для заказа:
+        <a href="mailto:truba@profilss.ru">truba@profilss.ru</a>
+      </li>
+    </ul>
+
+    <ul>
+      <li>
+        Телефон розничного отдела:
+        <a href="tel:+78442911199">+7 (8442) 91 11 99</a>
+      </li>
+
+      <li>
+        Почта розничного отдела:
+        <a href="mailto:base@profilss.ru">base@profilss.ru</a>
+      </li>
+    </ul>
+
+    <ul>
+      <li>
+        Телефон оптового отдела:
+        <a href="tel:+78442998199">+7 (8442) 99 81 99</a>
+      </li>
+
+      <li>
+        Почта оптового отдела:
+        <a href="mailto:office@profilss.ru">office@profilss.ru</a>
+      </li>
+    </ul>
+
+    <iframe
+      class="map"
+      src="https://yandex.ru/map-widget/v1/?um=constructor%3Ac439e34ec90c6824cb4d012387914f205caf8a18e6123aa462cdade3e4082a4b&source=constructor"
+      width="100%"
+      height="400"
+      frameborder="0"
+    >
+    </iframe>
+
+    <h3>Обратная связь</h3>
+
+    <FeedbackComponent />
+  </section>
+</BaseLayout>
+
+<style lang="scss">
+  section {
+    display: grid;
+    grid-template: auto / repeat(3, 1fr);
+    gap: 40px;
+    margin: auto;
+    max-width: var(--t-max-width);
+    padding: 92px 0 0;
+
+    h1,
+    h3 {
+      grid-column: 1 / -1;
+    }
+
+    ul {
+      li {
+        margin: 0 0 20px;
+      }
+    }
+  }
+
+  .map {
+    grid-column: 1 / -1;
+  }
+
+  @media only screen and (max-width: 720px) {
+    section {
+      grid-template: auto / 1fr;
+
+      h1 {
+        grid-column: auto;
+      }
+    }
+
+    .map {
+      grid-column: auto;
+    }
+  }
+</style>
