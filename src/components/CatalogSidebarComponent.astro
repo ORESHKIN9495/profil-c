@@ -1,0 +1,78 @@
+---
+const { catregory } = Astro.props;
+
+const links = [
+  {
+    name: "Трубы круглые",
+    url: "/",
+  },
+  {
+    name: "Трубы квадратные",
+    url: "/",
+  },
+  {
+    name: "Трубы прямоугольные",
+    url: "/",
+  },
+  {
+    name: "Трубы овальные",
+    url: "/",
+  },
+  {
+    name: "Трубы плоскоовальные",
+    url: "/",
+  },
+  {
+    name: "Трубы ВГП",
+    url: "/",
+  },
+  {
+    name: "Трубы оцинкованые",
+    url: "/",
+  },
+];
+---
+
+<aside>
+  <nav>
+    <ul>
+      {
+        links.map((link) => (
+          <li class:list={{ active: link.name === catregory }}>
+            <a href={link.url}>{link.name}</a>
+          </li>
+        ))
+      }
+    </ul>
+  </nav>
+</aside>
+
+<style lang="scss">
+  aside {
+    background-color: #f9f9f9;
+    border-radius: 25px;
+    box-shadow: 0 5px 5px rgba(20, 31, 51, 0.06);
+    padding: 40px 0;
+    width: 100%;
+    position: sticky;
+    top: 140px;
+
+    nav {
+      ul {
+        display: grid;
+        gap: 1px;
+
+        li {
+          padding: 10px 40px;
+
+          &:hover {
+            background-color: var(--c-theme);
+            color: white;
+          }
+          a {
+          }
+        }
+      }
+    }
+  }
+</style>
