@@ -49,6 +49,7 @@ const links = [
     position: sticky;
     top: 0;
     z-index: 9;
+    transition: all 0.1s ease-in-out;
 
     nav {
       display: flex;
@@ -87,16 +88,16 @@ const links = [
   }
 
   .shadow {
-    box-shadow: 0 8px 18px rgba(20, 31, 51, 0.4);
+    box-shadow: 0 5px 5px rgba(20, 31, 51, 0.2);
   }
 </style>
 
 <script>
-  const products = document.querySelector("#products");
+  const trigger = document.querySelector("#trigger");
   const header = document.querySelector("#header");
 
   window.addEventListener("scroll", () => {
-    if (products.getBoundingClientRect().top < header.getBoundingClientRect().bottom) {
+    if (trigger.getBoundingClientRect().top < header.getBoundingClientRect().bottom) {
       header.classList.add("shadow");
     } else {
       header.classList.remove("shadow");

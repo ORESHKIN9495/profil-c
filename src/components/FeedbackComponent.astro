@@ -4,15 +4,21 @@
 
 <form>
   <label>
-    <input type="text" placeholder="Ваше имя" />
+    Ваше имя
+
+    <input type="text" />
   </label>
 
   <label>
-    <input type="text" placeholder="Ваш e-mail" />
+    Ваш e-mail
+
+    <input type="text" />
   </label>
 
   <label>
-    <textarea cols="30" rows="10" placeholder="Ваше сообщение"></textarea>
+    Ваше сообщение
+
+    <textarea cols="10" rows="5"></textarea>
   </label>
 
   <button class="button">Отправить</button>
@@ -20,16 +26,24 @@
 
 <style lang="scss">
   form {
+    border-radius: 25px;
+    box-shadow: 0 5px 5px rgba(20, 31, 51, 0.06);
     display: grid;
-    gap: 40px;
+    gap: 20px;
     grid-template: auto / repeat(2, 1fr);
     grid-column: 1 / -1;
+    padding: 40px;
 
     label {
-      input,
+      input {
+        border-bottom: 1px solid #00000020;
+        margin: 5px 0 0;
+        width: 100%;
+      }
+
       textarea {
-        border: 1px solid #a2a2a2;
-        padding: 10px;
+        background-color: #00000004;
+        margin: 10px 0 0;
         width: 100%;
       }
 
