@@ -7,17 +7,43 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     <h1>Доставка</h1>
 
     <span>
-      <picture><img src="/images/service/parovoz.png" alt="/" /></picture>
+      <svg width="100" height="50"><use xlink:href="/images/sprites.svg#train"></use></svg>
       <h3>Жд</h3>
     </span>
 
     <ul>
       <li>
-        <picture><img src="/images/service/5tn.png" alt="/" /></picture>
+        <span>
+          <svg width="96" height="80"><use xlink:href="/images/sprites.svg#5tn"></use></svg>
+           Контейнер
+        </span>
+
+        <span>
+          <svg width="96" height="80"><use xlink:href="/images/sprites.svg#20tn"></use></svg>
+           Контейнер
+        </span>
+
+        <span>
+          <svg width="120" height="80"><use xlink:href="/images/sprites.svg#60tn"></use></svg>
+           Полувагон
+        </span>
       </li>
 
       <li>
-        <picture><img src="/images/service/dva_i_tri.png" alt="/" /></picture>
+        <span>
+          <svg width="150" height="50"><use xlink:href="/images/sprites.svg#pipe"></use></svg>
+           2.3м
+        </span>
+
+        <span>
+          <svg width="150" height="50"><use xlink:href="/images/sprites.svg#pipe"></use></svg>
+           5.8м
+        </span>
+
+        <span>
+          <svg width="150" height="50"><use xlink:href="/images/sprites.svg#pipe"></use></svg>
+           12м
+        </span>
       </li>
 
       <li>
@@ -27,13 +53,13 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     </ul>
 
     <span>
-      <picture><img src="/images/service/grzv_gray.png" alt="/" /></picture>
+      <svg width="100" height="50"><use xlink:href="/images/sprites.svg#truck"></use></svg>
       <h3>Автотранспорт</h3>
     </span>
 
     <ul>
       <li>
-        <picture><img src="/images/service/1tn.png" alt="/" /></picture>
+        <svg width="96" height="80"><use xlink:href="/images/sprites.svg#1tn"></use></svg>
       </li>
 
       <li>Любой регион РФ от 1 тонны</li>
@@ -61,7 +87,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 
     <ul>
       <li>
-        <picture><img src="/images/service/rezka.png" alt="/" /></picture>
+        <svg width="200" height="100"><use xlink:href="/images/sprites.svg#saw"></use></svg>
       </li>
 
       <li>Розница (от одной штуки)</li>
@@ -71,9 +97,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 
     <ul>
       <li>
-        <picture>
-          <img src="/images/service/trubi_specdlina.png" alt="/" />
-        </picture>
+        <svg width="200" height="100"><use xlink:href="/images/sprites.svg#pipes"></use></svg>
       </li>
 
       <li>Опт (от одной тонны)</li>
@@ -85,7 +109,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 
     <ul>
       <li>
-        <picture><img src="/images/service/rulon.png" alt="/" /></picture>
+        <svg width="120" height="100"><use xlink:href="/images/sprites.svg#roll"></use></svg>
       </li>
 
       <li>Стоимость 500 руб/тн</li>
@@ -98,7 +122,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 
     <ul>
       <li>
-        <picture><img src="/images/service/pipebox.png" alt="/" /></picture>
+        <svg width="200" height="100"><use xlink:href="/images/sprites.svg#box"></use></svg>
       </li>
 
       <li>Стоимость от 1500 руб/тн</li>
@@ -110,7 +134,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 
     <ul>
       <li>
-        <picture><img src="/images/service/zont_obrabotka.png" alt="/" /></picture>
+        <svg width="100" height="100"><use xlink:href="/images/sprites.svg#umbrella"></use></svg>
       </li>
 
       <li>Универсальное средство по борьбе с коррозией</li>
@@ -151,8 +175,15 @@ import BaseLayout from "../layouts/BaseLayout.astro";
       display: grid;
       grid-template: auto / repeat(3, 1fr);
       gap: 20px;
-      margin: 0 0 92px;
-      place-items: center;
+      margin: 60px 0 92px;
+      place-items: center baseline;
+
+      &:first-of-type {
+        li {
+          display: grid;
+          gap: 40px;
+        }
+      }
 
       &:nth-of-type(3) {
         grid-template: auto / 1fr;
@@ -172,10 +203,10 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     span {
       display: grid;
       place-items: center;
+    }
 
-      h3 {
-        margin-top: 20px;
-      }
+    p {
+      margin: 0 0 20px;
     }
   }
 
