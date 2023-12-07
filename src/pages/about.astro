@@ -101,8 +101,8 @@ const gallery = [
   <section id="trigger">
     <h1>О компании</h1>
 
-    <ul>
-      <li>
+    <article>
+      <p>
         Наше предприятие растет, и мы регулярно увеличиваем географию наших поставок: постепенно к партнерам из
         Волгограда и Волгоградской области прибавились клиенты из Краснодара и Хабаровска, из Омска и Брянска.<br /><br
         />
@@ -110,9 +110,9 @@ const gallery = [
         центров Российской Федерации. Наработанный опыт позволяет разрабатывать наиболее выгодную для каждого клиента
         логистическую схему, предлагать оптимальную упаковку продукции и с минимальной погрешностью определять сроки
         поставки.
-      </li>
+      </p>
 
-      <li>
+      <p>
         Несмотря на достаточную известность, мы активно принимаем участие в специализированных выставках, так как всегда
         заинтересованы в новых клиентах. К тому же мы рады представить новые типы стальных труб нашим постоянным и
         потенциальным покупателям.<br /><br />
@@ -122,13 +122,13 @@ const gallery = [
         Стремление к новым достижениям, спортивный азарт сделать свою работу еще лучше и качественнее, спокойная
         рассудительность в принятии решений и удовольствие работать в коллективе хороших людей и для хороших людей –
         таковы основные характеристики команды «Профиль-Сталь».
-      </li>
-    </ul>
+      </p>
+    </article>
 
     <h3>Спорт</h3>
 
-    <ul>
-      <li>
+    <article>
+      <p>
         Основой потенциала компании «Профиль-Сталь» является ее коллектив. Деятельность сотрудников компании построена
         на принципах взаимовыручки, профессионализма и слаженности действий. Чтобы достичь такого уровня, руководство
         компании «Профиль-Сталь» наладило систему неформальных отношений, таких как, ежегодные сплавы по реке Дон,
@@ -143,9 +143,9 @@ const gallery = [
         <picture>
           <img src="/images/sport/hokkey.jpg" alt="" />
         </picture>
-      </li>
+      </p>
 
-      <li>
+      <p>
         Занятие спортом дело полезное и привлекательное. Для офиса удачным решением является игра в дартс. Специалисты
         давно советуют, что офисным работникам следует обратить особое внимание на эту игру. Во-первых, это отличный вид
         корпоративного отдыха. А во-вторых, тенденции последних лет указывают на то, что умение достойно играть в дартс
@@ -162,8 +162,8 @@ const gallery = [
         <picture>
           <img src="/images/sport/goblet.jpg" alt="" />
         </picture>
-      </li>
-    </ul>
+      </p>
+    </article>
 
     <h3>Фотогалерея</h3>
 
@@ -181,54 +181,53 @@ const gallery = [
 
 <style lang="scss">
   section {
-    display: grid;
-    gap: 40px;
     margin: auto;
     max-width: var(--t-max-width);
     padding: 100px 0;
 
-    ul {
-      display: grid;
-      grid-template: auto / repeat(2, 1fr);
-      gap: 40px;
-
-      li {
-        margin: 0 0 20px;
-      }
-
-      &:nth-of-type(2) {
-        grid-template: auto / 1fr;
-
-        li {
-          display: grid;
-          grid-template: auto / repeat(2, 1fr);
-          gap: 40px;
-          margin: 0;
-        }
-      }
+    h1,
+    h3 {
+      margin: 100px 0 20px;
     }
 
     article {
       display: grid;
+      grid-template: auto / repeat(2, 1fr);
       gap: 20px;
-      overflow: auto;
-      scrollbar-color: darkgrey #ffffff;
-      scrollbar-width: thin;
 
-      picture {
-        display: flex;
-        gap: 20px;
+      &:nth-of-type(2) {
+        grid-template: auto / 1fr;
+
+        p {
+          display: grid;
+          grid-template: auto / repeat(2, 1fr);
+          gap: 20px;
+        }
+      }
+
+      &:last-of-type {
+        grid-template: auto / 1fr;
+        overflow: auto;
+        scrollbar-color: darkgrey #ffffff;
+        scrollbar-width: thin;
+
+        picture {
+          display: flex;
+          gap: 20px;
+        }
       }
     }
   }
 
   @media only screen and (max-width: 720px) {
     section {
-      ul {
+      article {
         grid-template: auto / 1fr;
 
-        li {
-          grid-template: auto / 1fr !important;
+        &:nth-of-type(2) {
+          p {
+            grid-template: auto / 1fr;
+          }
         }
       }
     }
