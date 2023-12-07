@@ -40,7 +40,7 @@
     </symbol>
 
     <symbol id="icon-rectangle" viewBox="0 0 48 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <rect fill="none" x="1" y="1" width="46" height="22" stroke="currentColor" stroke-width="4"/>
+        <rect fill="none" x="1" y="1" width="46" height="22" stroke="currentColor" stroke-width="3"/>
     </symbol>
 
     <symbol id="icon-circle" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -53,11 +53,11 @@
     </symbol>
 
     <symbol id="icon-rectangle-rounded" viewBox="0 0 48 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <rect fill="none" x="1" y="1" width="46" height="22" rx="9" stroke="currentColor" stroke-width="4"/>
+        <rect fill="none" x="1" y="1" width="46" height="22" rx="9" stroke="currentColor" stroke-width="3"/>
     </symbol>
 
     <symbol id="icon-elipse" viewBox="0 0 48 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path fill="none" d="M47 12C47 14.7309 44.7602 17.4724 40.5233 19.5909C36.3463 21.6794 30.5058 23 24 23C17.4942 23 11.6537 21.6794 7.47665 19.5909C3.23981 17.4724 1 14.7309 1 12C1 9.26912 3.23981 6.52757 7.47665 4.40915C11.6537 2.32063 17.4942 1 24 1C30.5058 1 36.3463 2.32063 40.5233 4.40915C44.7602 6.52757 47 9.26912 47 12Z" stroke="currentColor" stroke-width="4"/>
+        <path fill="none" d="M47 12C47 14.7309 44.7602 17.4724 40.5233 19.5909C36.3463 21.6794 30.5058 23 24 23C17.4942 23 11.6537 21.6794 7.47665 19.5909C3.23981 17.4724 1 14.7309 1 12C1 9.26912 3.23981 6.52757 7.47665 4.40915C11.6537 2.32063 17.4942 1 24 1C30.5058 1 36.3463 2.32063 40.5233 4.40915C44.7602 6.52757 47 9.26912 47 12Z" stroke="currentColor" stroke-width="3"/>
     </symbol>
 
     <symbol id="icon-house-check" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
