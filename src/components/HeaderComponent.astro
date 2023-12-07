@@ -45,11 +45,12 @@ const links = [
 <style lang="scss">
   header {
     background-color: var(--c-theme);
+    box-shadow: 0 5px 5px rgba(20, 31, 51, 0.2);
     color: var(--c-inverted);
     position: sticky;
     top: 0;
     z-index: 9;
-    transition: all 0.1s ease-in-out;
+    transition: box-shadow 0.3s ease-in-out;
 
     nav {
       display: flex;
@@ -66,6 +67,7 @@ const links = [
         li {
           a {
             padding: 0 0 5px;
+
             &:hover {
               background-color: var(--c-theme);
               border-bottom: 2px solid;
@@ -86,21 +88,4 @@ const links = [
       padding: 20px 0;
     }
   }
-
-  .shadow {
-    box-shadow: 0 5px 5px rgba(20, 31, 51, 0.2);
-  }
 </style>
-
-<script>
-  const trigger = document.querySelector("#trigger");
-  const header = document.querySelector("#header");
-
-  window.addEventListener("scroll", () => {
-    if (trigger.getBoundingClientRect().top < header.getBoundingClientRect().bottom) {
-      header.classList.add("shadow");
-    } else {
-      header.classList.remove("shadow");
-    }
-  });
-</script>

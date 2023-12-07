@@ -1,4 +1,5 @@
 ---
+import CrumbsComponent from "../components/CrumbsComponent.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
 
 const gallery = [
@@ -98,7 +99,9 @@ const gallery = [
 ---
 
 <BaseLayout>
-  <section id="trigger">
+  <CrumbsComponent title="О компании" />
+
+  <section>
     <h1>О компании</h1>
 
     <article>
@@ -185,7 +188,10 @@ const gallery = [
     max-width: var(--t-max-width);
     padding: 100px 0;
 
-    h1,
+    h1 {
+      margin: 40px 0;
+    }
+
     h3 {
       margin: 100px 0 20px;
     }

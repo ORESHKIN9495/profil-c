@@ -1,10 +1,13 @@
 ---
+import CrumbsComponent from "../components/CrumbsComponent.astro";
 import FeedbackComponent from "../components/FeedbackComponent.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
 <BaseLayout>
-  <section id="trigger">
+  <CrumbsComponent title="Контакты" />
+
+  <section>
     <h1>Контакты</h1>
 
     <ul>
@@ -63,6 +66,10 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     margin: auto;
     max-width: var(--t-max-width);
     padding: 100px 0;
+
+    h1 {
+      margin: 40px 0 0;
+    }
 
     h1,
     h3 {

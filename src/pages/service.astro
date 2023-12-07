@@ -1,9 +1,12 @@
 ---
+import CrumbsComponent from "../components/CrumbsComponent.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
 <BaseLayout>
-  <section id="trigger">
+  <CrumbsComponent title="Сервис" />
+
+  <section>
     <h1>Сервис</h1>
 
     <h3>Доставка</h3>
@@ -201,6 +204,10 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     margin: auto;
     max-width: var(--t-max-width);
     padding: 100px 0;
+
+    h1 {
+      margin: 40px 0 0;
+    }
 
     article {
       display: grid;

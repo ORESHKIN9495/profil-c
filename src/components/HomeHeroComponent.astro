@@ -57,7 +57,7 @@
     flex-direction: column;
     height: 100vh;
     position: sticky;
-    top: 92px;
+    top: 0;
 
     article {
       margin: auto auto 0;
@@ -78,3 +78,18 @@
     }
   }
 </style>
+
+<script is:inline>
+  const trigger = document.querySelector("section");
+  const header = document.querySelector("header");
+
+  header.setAttribute("style", "box-shadow: 0 5px 5px rgba(20, 31, 51, 0);");
+
+  window.addEventListener("scroll", () => {
+    if (trigger.getBoundingClientRect().bottom <= header.offsetTop) {
+      header.setAttribute("style", "box-shadow: 0 5px 5px rgba(20, 31, 51, 0.2);");
+    } else {
+      header.setAttribute("style", "box-shadow: 0 5px 5px rgba(20, 31, 51, 0);");
+    }
+  });
+</script>

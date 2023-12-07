@@ -1,0 +1,55 @@
+---
+const { parent, title } = Astro.props;
+---
+
+<aside>
+  <nav>
+    <ul>
+      <li><a href="/">Главная</a></li>
+      {
+        parent && (
+          <li>
+            <a href="/catalog">{parent}</a>
+          </li>
+        )
+      }
+      <li>{title}</li>
+    </ul>
+  </nav>
+</aside>
+
+<style lang="scss">
+  aside {
+    background-color: #f9f9f9;
+    box-shadow: 0 5px 5px rgba(20, 31, 51, 0.1);
+    padding: 20px 0;
+    position: sticky;
+    top: 92px;
+    z-index: 1;
+
+    nav {
+      margin: auto;
+      max-width: var(--t-max-width);
+
+      ul {
+        display: flex;
+        gap: 10px;
+
+        li {
+          &:not(:last-of-type) {
+            &::after {
+              content: " / ";
+              margin: 0 0 0 10px;
+            }
+          }
+
+          a {
+            &:hover {
+              border-bottom: 2px solid;
+            }
+          }
+        }
+      }
+    }
+  }
+</style>

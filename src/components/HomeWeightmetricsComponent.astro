@@ -1623,26 +1623,29 @@ const visible = "";
   }
 </style>
 
-<script>
-  let nav = document.querySelector(".nav");
-  let tab = document.querySelectorAll("svg");
-  let contents = document.querySelectorAll(".content");
+<script is:inline>
+  const nav = document.querySelector(".nav");
 
-  nav.addEventListener("click", (event: any) => {
+  nav.addEventListener("click", (event) => {
     if (event.target && event.target.nodeName === "svg") {
       // change tabs
-      for (let i = 0; i < tab.length; i++) {
-        tab[i].classList.remove("active");
+      let activeTab = nav.querySelector(".active");
+      if (activeTab) {
+        activeTab.classList.remove("active");
       }
-      event.target.classList.toggle("active");
+      event.target.classList.add("active");
 
       // change content
-      for (let i = 0; i < contents.length; i++) {
-        contents[i].classList.remove("active");
+      let activeContent = document.querySelector(".content.active");
+      if (activeContent) {
+        activeContent.classList.remove("active");
       }
 
       let tabId = "#" + event.target.dataset.tabId;
-      document.querySelector(tabId).classList.toggle("active");
+      let tabContent = document.querySelector(tabId);
+      if (tabContent) {
+        tabContent.classList.add("active");
+      }
     }
   });
 </script>
