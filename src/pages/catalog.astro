@@ -1,7 +1,61 @@
 ---
 import CatalogSidebarComponent from "../components/CatalogSidebarComponent.astro";
-import CrumbsComponent from "../components/CrumbsComponent.astro";
+import CardCatalogComponent from "../components/sub-components/CardCatalogComponent.astro";
+import CrumbsComponent from "../components/sub-components/CrumbsComponent.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
+
+const category = [
+  {
+    id: 1,
+    name: "Труба круглая",
+    image: "/images/catalog/01.jpg",
+  },
+  {
+    id: 2,
+    name: "Труба мебельная тонкостенная",
+    image: "/images/catalog/01.jpg",
+  },
+  {
+    id: 3,
+    name: "Труба водогазопроводная",
+    image: "/images/catalog/01.jpg",
+  },
+  {
+    id: 4,
+    name: "Труба прямоугольная",
+    image: "/images/catalog/01.jpg",
+  },
+  {
+    id: 5,
+    name: "Труба оцинкованная",
+    image: "/images/catalog/01.jpg",
+  },
+  {
+    id: 6,
+    name: "Труба овальная",
+    image: "/images/catalog/01.jpg",
+  },
+  {
+    id: 7,
+    name: "Труба квадратная",
+    image: "/images/catalog/01.jpg",
+  },
+  {
+    id: 8,
+    name: "Труба плоскоовальная",
+    image: "/images/catalog/01.jpg",
+  },
+  {
+    id: 9,
+    name: "Труба арочная",
+    image: "/images/catalog/01.jpg",
+  },
+  {
+    id: 10,
+    name: "Труба профильная",
+    image: "/images/catalog/01.jpg",
+  },
+];
 ---
 
 <BaseLayout>
@@ -10,152 +64,27 @@ import BaseLayout from "../layouts/BaseLayout.astro";
   <section>
     <h1>Каталог</h1>
 
+    <p>В нашем каталоге представлены все виды труб, которые вы можете приобрести в нашем магазине.</p>
+
     <CatalogSidebarComponent category="Трубы круглые" />
 
     <div>
-      <article>
-        <h4>Труба круглая</h4>
-        <ul>
-          <li><b>D</b> - диаметр</li>
-          <li><b>S</b> - толщина стенки, мм</li>
-          <li><b>ДН</b> - диаметр наружный, мм</li>
-          <li>ГОСТ 10704-91 - <a href="/">Скачать</a></li>
-        </ul>
-        <a href="/catalog/post-1" class="button">Перейти к товарам</a>
-
-        <img src="/images/catalog/01.jpg" alt="" />
-      </article>
-
-      <article>
-        <h4>Труба мебельная тонкостенная</h4>
-        <ul>
-          <li><b>D</b> - диаметр</li>
-          <li><b>S</b> - толщина стенки, мм</li>
-          <li><b>ДН</b> - диаметр наружный, мм</li>
-          <li>ГОСТ 10704-91 - <a href="/">Скачать</a></li>
-        </ul>
-        <a href="/" class="button">Перейти к товарам</a>
-
-        <img src="/images/catalog/01.jpg" alt="" />
-      </article>
-
-      <article>
-        <h4>Труба водогазопроводная</h4>
-        <ul>
-          <li><b>D</b> - диаметр</li>
-          <li><b>S</b> - толщина стенки, мм</li>
-          <li><b>ДН</b> - диаметр наружный, мм</li>
-          <li>ГОСТ 10704-91 - <a href="/">Скачать</a></li>
-        </ul>
-        <a href="/" class="button">Перейти к товарам</a>
-
-        <img src="/images/catalog/01.jpg" alt="" />
-      </article>
-
-      <article>
-        <h4>Труба прямоугольная</h4>
-        <ul>
-          <li><b>D</b> - диаметр</li>
-          <li><b>S</b> - толщина стенки, мм</li>
-          <li><b>ДН</b> - диаметр наружный, мм</li>
-          <li>ГОСТ 10704-91 - <a href="/">Скачать</a></li>
-        </ul>
-        <a href="/" class="button">Перейти к товарам</a>
-
-        <img src="/images/catalog/01.jpg" alt="" />
-      </article>
-
-      <article>
-        <h4>Труба оцинкованная</h4>
-        <ul>
-          <li><b>D</b> - диаметр</li>
-          <li><b>S</b> - толщина стенки, мм</li>
-          <li><b>ДН</b> - диаметр наружный, мм</li>
-          <li>ГОСТ 10704-91 - <a href="/">Скачать</a></li>
-        </ul>
-        <a href="/" class="button">Перейти к товарам</a>
-
-        <img src="/images/catalog/01.jpg" alt="" />
-      </article>
-
-      <article>
-        <h4>Труба овальная</h4>
-        <ul>
-          <li><b>D</b> - диаметр</li>
-          <li><b>S</b> - толщина стенки, мм</li>
-          <li><b>ДН</b> - диаметр наружный, мм</li>
-          <li>ГОСТ 10704-91 - <a href="/">Скачать</a></li>
-        </ul>
-        <a href="/" class="button">Перейти к товарам</a>
-
-        <img src="/images/catalog/01.jpg" alt="" />
-      </article>
-
-      <article>
-        <h4>Труба квадратная</h4>
-        <ul>
-          <li><b>D</b> - диаметр</li>
-          <li><b>S</b> - толщина стенки, мм</li>
-          <li><b>ДН</b> - диаметр наружный, мм</li>
-          <li>ГОСТ 10704-91 - <a href="/">Скачать</a></li>
-        </ul>
-        <a href="/" class="button">Перейти к товарам</a>
-
-        <img src="/images/catalog/01.jpg" alt="" />
-      </article>
-
-      <article>
-        <h4>Труба плоскоовальная</h4>
-        <ul>
-          <li><b>D</b> - диаметр</li>
-          <li><b>S</b> - толщина стенки, мм</li>
-          <li><b>ДН</b> - диаметр наружный, мм</li>
-          <li>ГОСТ 10704-91 - <a href="/">Скачать</a></li>
-        </ul>
-        <a href="/" class="button">Перейти к товарам</a>
-
-        <img src="/images/catalog/01.jpg" alt="" />
-      </article>
-
-      <article>
-        <h4>Труба арочная</h4>
-        <ul>
-          <li><b>D</b> - диаметр</li>
-          <li><b>S</b> - толщина стенки, мм</li>
-          <li><b>ДН</b> - диаметр наружный, мм</li>
-          <li>ГОСТ 10704-91 - <a href="/">Скачать</a></li>
-        </ul>
-        <a href="/" class="button">Перейти к товарам</a>
-
-        <img src="/images/catalog/01.jpg" alt="" />
-      </article>
-
-      <article>
-        <h4>Труба профильная</h4>
-        <ul>
-          <li><b>D</b> - диаметр</li>
-          <li><b>S</b> - толщина стенки, мм</li>
-          <li><b>ДН</b> - диаметр наружный, мм</li>
-          <li>ГОСТ 10704-91 - <a href="/">Скачать</a></li>
-        </ul>
-        <a href="/" class="button">Перейти к товарам</a>
-
-        <img src="/images/catalog/01.jpg" alt="" />
-      </article>
+      {category.map((item) => <CardCatalogComponent id={item.id} name={item.name} image={item.image} />)}
     </div>
-    <h3>Труба стальная электросварная (ГОСТ 10704-91)</h3>
 
-    <article style="position: sticky; top: 0">
+    <article>
+      <h3>Труба стальная электросварная (ГОСТ 10704-91)</h3>
+
       <p>
         Трубы стальные электросварные профильные являются наиболее популярным типом металлопроката и представляют собой
         элементы длиной от 2 до 6 м, с различным диаметром круглого сечения и толщиной стенок.
       </p>
 
-      <h3>Что такое труба стальная электросварная (ГОСТ 10704-91)?</h3>
+      <h3>Что такое Труба стальная электросварная (ГОСТ 10704-91)?</h3>
       <p>
         Изготавливаются такие трубы из специальных штрипсов либо листового холоднокатаного проката методом формовки и
         последующей сварки. Если соединение шва с помощью электросварки осуществляется по поперечной оси, готовый
-        элемент считается прямошовным. При сваривании соединения по спирали в итоге получается спиралешовная труба.
+        элемент считается прямошовным. При сваривании соединения по спирали в итоге получается спиралешовная Труба.
         Такая форма не должна подвергаться гибке, иначе может нарушиться целостность конструктива.
       </p>
 
@@ -165,7 +94,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
       </p>
 
       <p>
-        Создается такая продукция из качественной углеродистой или низкоуглеродистой стали. Для придания готовым трубам
+        Создается такая продукция из качественной углеродистой или низкоуглеродистой стали. Для придания готовым Трубам
         необходимых антикоррозийных свойств заготовки подвергаются обработке специальными защитными составами.
       </p>
 
@@ -199,10 +128,10 @@ import BaseLayout from "../layouts/BaseLayout.astro";
         сварная продукция не должна иметь на поверхности дефектов.
       </p>
 
-      <h5>Зачем нужна труба стальная электросварная (ГОСТ 10704-91)?</h5>
+      <h5>Зачем нужна Труба стальная электросварная (ГОСТ 10704-91)?</h5>
 
       <p>
-        Труба стальная электросварная (цену за тонну можно уточнить у менеджера «Профиль - сталь») благодаря своей
+        Труба стальная электросварная (цену за тонну можно уточнить у менеджера «Профиль - С») благодаря своей
         универсальности, многообразию диаметров и размеров, легкости монтажа и небольшому весу широко применяется в
         различных сферах народного и сельского хозяйства, промышленности. Используются:
       </p>
@@ -223,7 +152,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 
       <p>Почему нужно обратиться к нам? У нас лучшая стоимость трубы стальной электросварной за метр!</p>
 
-      <p>Сотрудничая с «Профиль-стиль» наши клиенты могут рассчитывать на:</p>
+      <p>Сотрудничая с «Профиль- С» наши клиенты могут рассчитывать на:</p>
 
       <ul>
         <li>круглосуточную отгрузку товара;</li>
@@ -239,54 +168,33 @@ import BaseLayout from "../layouts/BaseLayout.astro";
       </p>
     </article>
   </section>
-</BaseLayout>
 
-<style lang="scss">
-  section {
-    display: grid;
-    grid-template: auto / 320px 1fr;
-    gap: 40px;
-    margin: auto;
-    max-width: var(--t-max-width);
-    padding: 100px 0;
-    place-items: baseline;
+  <style lang="scss">
+    section {
+      display: grid;
+      grid-template: auto / 1fr;
+      gap: 40px;
+      margin: auto;
+      max-width: var(--t-max-width);
+      padding: 100px 0;
 
-    h1 {
-      margin: 40px 0 0;
-    }
+      h1 {
+        margin: 40px 0 0;
+      }
 
-    h1 {
-      grid-column: 1 / -1;
-    }
+      h1 {
+        grid-column: 1 / -1;
+      }
 
-    div {
-      display: inherit;
-      gap: inherit;
+      div {
+        display: grid;
+        grid-template: auto / repeat(4, 1fr);
+        gap: 40px;
+      }
 
       article {
-        display: grid;
-        grid-template: auto / 1fr auto;
-        ul {
-          li {
-            b {
-              font-weight: 400;
-            }
-
-            &:last-of-type {
-              margin: 20px 0 0;
-
-              a {
-                text-decoration: underline;
-              }
-            }
-          }
-        }
-
-        img {
-          grid-column: 2;
-          grid-row: 1 / 3;
-        }
+        grid-column: 1 / -1;
       }
     }
-  }
-</style>
+  </style>
+</BaseLayout>

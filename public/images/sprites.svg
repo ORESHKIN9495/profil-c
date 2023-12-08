@@ -6,75 +6,79 @@
 
     <symbol id="icon-map" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 21">
         <path stroke="currentColor" stroke-linejoin="round" stroke-width="3" d="M9 9h.01v.01H9z"/>
-        <path fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="2" d="m9 20 5.5-5.5a7.778 7.778 0 1 0-11 0L9 20Z"/>
+        <path fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="1" d="m9 20 5.5-5.5a7.778 7.778 0 1 0-11 0L9 20Z"/>
     </symbol>
 
 
     <symbol id="icon-work" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
-        <circle fill="none" cx="10" cy="10" r="9" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
-        <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 6v5h5"/>
+        <circle fill="none" cx="10" cy="10" r="9" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M9 6v5h5"/>
     </symbol>
 
 
     <symbol id="icon-calendar" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 19">
-        <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 2h16v14a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V2ZM1 6h16M13 1v2M5 1v2"/>
+        <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M1 2h16v14a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V2ZM1 6h16M13 1v2M5 1v2"/>
     </symbol>
 
     <symbol id="icon-iso" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 19 18">
-        <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.36 17H3a2 2 0 0 1-2-2V7h3.93a2 2 0 0 0 1.664-.89L9.11 2.335A3 3 0 0 1 11.606 1h.214a1 1 0 0 1 .986 1.164L12 7h3.56a2 2 0 0 1 1.962 2.392l-1.2 6A2 2 0 0 1 14.36 17Z"/>
-        <path stroke="currentColor" stroke-width="2" d="M5 7v10"/>
+        <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M14.36 17H3a2 2 0 0 1-2-2V7h3.93a2 2 0 0 0 1.664-.89L9.11 2.335A3 3 0 0 1 11.606 1h.214a1 1 0 0 1 .986 1.164L12 7h3.56a2 2 0 0 1 1.962 2.392l-1.2 6A2 2 0 0 1 14.36 17Z"/>
+        <path fill="white" stroke="currentColor" stroke-width="1" d="M5 7v10"/>
     </symbol>
 
 
-    <symbol id="icon-truck" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 22 20">
-        <path fill="currentColor" d="M1 1V0a1 1 0 0 0-1 1h1Zm11 0h1a1 1 0 0 0-1-1v1Zm0 6V6a1 1 0 0 0-1 1h1ZM1 2h11V0H1v2Zm10-1v16h2V1h-2ZM2 15V1H0v14h2Zm10-7h5V6h-5v2Zm8 3v4h2v-4h-2Zm-7 6V7h-2v10h2Zm4.707.707a1 1 0 0 1-1.414 0l-1.414 1.414a3 3 0 0 0 4.242 0l-1.414-1.414Zm-1.414-1.414a1 1 0 0 1 1.414 0l1.414-1.414a3 3 0 0 0-4.242 0l1.414 1.414ZM5.707 17.707a1 1 0 0 1-1.414 0l-1.414 1.414a3 3 0 0 0 4.242 0l-1.414-1.414Zm-1.414-1.414a1 1 0 0 1 1.414 0l1.414-1.414a3 3 0 0 0-4.242 0l1.414 1.414Zm13.414 0c.196.195.293.45.293.707h2c0-.766-.293-1.536-.879-2.121l-1.414 1.414ZM18 17a.994.994 0 0 1-.293.707l1.414 1.414A2.994 2.994 0 0 0 20 17h-2Zm-3-1h-3v2h3v-2Zm1.293 1.707A.994.994 0 0 1 16 17h-2c0 .766.293 1.536.879 2.121l1.414-1.414ZM16 17c0-.258.097-.512.293-.707l-1.414-1.414A2.994 2.994 0 0 0 14 17h2Zm-11.707.707A.994.994 0 0 1 4 17H2c0 .766.293 1.536.879 2.121l1.414-1.414ZM4 17c0-.258.097-.512.293-.707l-1.414-1.414A2.994 2.994 0 0 0 2 17h2Zm8-1H7v2h5v-2Zm-6.293.293c.196.195.293.45.293.707h2c0-.766-.293-1.536-.879-2.121l-1.414 1.414ZM6 17a.994.994 0 0 1-.293.707l1.414 1.414A2.994 2.994 0 0 0 8 17H6Zm14-2a1 1 0 0 1-1 1v2a3 3 0 0 0 3-3h-2Zm-3-7a3 3 0 0 1 3 3h2a5 5 0 0 0-5-5v2ZM0 15a3 3 0 0 0 3 3v-2a1 1 0 0 1-1-1H0Z"/>
-        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 6h3M1 10h5"/>
-    </symbol>
+    <svg id="icon-truck" viewBox="0 0 27 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M17 7H21.5C26 7 26 10.5 26 12V15C26 17 25.5 17 24.5 17H22H19.5H17H12.5H10H7.5C6 17 6 17 6 15V10.5V6V2C6 2 6 1 7 1H16C17 1 17 2 17 2V7Z" fill="white"/>
+        <path d="M17 7C17 7 17 7 21.5 7C26 7 26 10.5 26 12C26 12.7353 26 13.9513 26 15C26 17 25.5 17 24.5 17C24.5 17 25 17 22 17C19 17 19.5 17 19.5 17M17 7V17M17 7V2C17 2 17 1 16 1C15 1 8 1 7 1C6 1 6 2 6 2V6M12.5 17C12.5 17 12.5 17 10 17C7.5 17 7.5 17 7.5 17C6 17 6 17 6 15V10.5M12.5 17C14.5392 17 17.4608 17 19.5 17M12.5 17H19.5M6 6H2.5M6 6V10.5M6 10.5H0.5" stroke="currentColor"/>
+        <circle cx="11" cy="17" r="2.5" fill="white" stroke="currentColor"/>
+        <circle cx="21" cy="17" r="2.5" fill="white" stroke="currentColor"/>
+    </svg>
+
+
 
     <symbol id="icon-rigth-corner" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 16">
         <path fill="currentColor" d="M14 13.5a.5.5 0 0 1-.5.5h-6a.5.5 0 0 1 0-1h4.793L2.146 2.854a.5.5 0 1 1 .708-.708L13 12.293V7.5a.5.5 0 0 1 1 0z"/>
     </symbol>
 
     <symbol id="icon-square" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <rect fill="none" x="1" y="1" width="22" height="22" stroke="currentColor" stroke-width="2"/>
+        <rect fill="none" x="1" y="1" width="22" height="22" stroke="currentColor" stroke-width="1.5"/>
     </symbol>
 
     <symbol id="icon-rectangle" viewBox="0 0 48 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <rect fill="none" x="1" y="1" width="46" height="22" stroke="currentColor" stroke-width="3"/>
+        <rect fill="none" x="1" y="1" width="46" height="22" stroke="currentColor" stroke-width="2"/>
     </symbol>
 
     <symbol id="icon-circle" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <circle fill="none" cx="12" cy="12" r="11" stroke="currentColor" stroke-width="2"/>
+        <circle fill="none" cx="12" cy="12" r="11" stroke="currentColor" stroke-width="1.5"/>
     </symbol>
 
     <symbol id="icon-circle-v2" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <rect fill="none" x="1" y="1" width="22" height="22" rx="11" stroke="currentColor" stroke-width="2"/>
+        <rect fill="none" x="1" y="1" width="22" height="22" rx="11" stroke="currentColor" stroke-width="1.5"/>
         <path d="M4.57386 15V9.18182H6.80114C7.22159 9.18182 7.57102 9.24811 7.84943 9.38068C8.12973 9.51136 8.33902 9.69034 8.47727 9.91761C8.61742 10.1449 8.6875 10.4025 8.6875 10.6903C8.6875 10.9271 8.64205 11.1297 8.55114 11.2983C8.46023 11.465 8.33807 11.6004 8.18466 11.7045C8.03125 11.8087 7.85985 11.8835 7.67045 11.929V11.9858C7.87689 11.9972 8.07481 12.0606 8.2642 12.1761C8.45549 12.2898 8.61174 12.4508 8.73295 12.6591C8.85417 12.8674 8.91477 13.1193 8.91477 13.4148C8.91477 13.7159 8.84186 13.9867 8.69602 14.2273C8.55019 14.4659 8.33049 14.6544 8.03693 14.7926C7.74337 14.9309 7.37405 15 6.92898 15H4.57386ZM5.62784 14.1193H6.76136C7.14394 14.1193 7.41951 14.0464 7.58807 13.9006C7.75852 13.7528 7.84375 13.5634 7.84375 13.3324C7.84375 13.16 7.80114 13.0047 7.71591 12.8665C7.63068 12.7263 7.50947 12.6165 7.35227 12.5369C7.19508 12.4555 7.00758 12.4148 6.78977 12.4148H5.62784V14.1193ZM5.62784 11.6562H6.67045C6.85227 11.6562 7.0161 11.6231 7.16193 11.5568C7.30777 11.4886 7.42235 11.393 7.50568 11.2699C7.59091 11.1449 7.63352 10.9972 7.63352 10.8267C7.63352 10.6013 7.55398 10.4157 7.39489 10.2699C7.23769 10.1241 7.00379 10.0511 6.69318 10.0511H5.62784V11.6562ZM13.5732 9.18182V10.0653H10.8857V15H9.83168V9.18182H13.5732ZM19.2116 9.18182V15H18.1662V10.0568H15.6207V15H14.5753V9.18182H19.2116Z" fill="currentColor"/>
     </symbol>
 
     <symbol id="icon-rectangle-rounded" viewBox="0 0 48 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <rect fill="none" x="1" y="1" width="46" height="22" rx="9" stroke="currentColor" stroke-width="3"/>
+        <rect fill="none" x="1" y="1" width="46" height="22" rx="9" stroke="currentColor" stroke-width="2"/>
     </symbol>
 
     <symbol id="icon-elipse" viewBox="0 0 48 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path fill="none" d="M47 12C47 14.7309 44.7602 17.4724 40.5233 19.5909C36.3463 21.6794 30.5058 23 24 23C17.4942 23 11.6537 21.6794 7.47665 19.5909C3.23981 17.4724 1 14.7309 1 12C1 9.26912 3.23981 6.52757 7.47665 4.40915C11.6537 2.32063 17.4942 1 24 1C30.5058 1 36.3463 2.32063 40.5233 4.40915C44.7602 6.52757 47 9.26912 47 12Z" stroke="currentColor" stroke-width="3"/>
+        <path fill="none" d="M47 12C47 14.7309 44.7602 17.4724 40.5233 19.5909C36.3463 21.6794 30.5058 23 24 23C17.4942 23 11.6537 21.6794 7.47665 19.5909C3.23981 17.4724 1 14.7309 1 12C1 9.26912 3.23981 6.52757 7.47665 4.40915C11.6537 2.32063 17.4942 1 24 1C30.5058 1 36.3463 2.32063 40.5233 4.40915C44.7602 6.52757 47 9.26912 47 12Z" stroke="currentColor" stroke-width="2"/>
     </symbol>
 
     <symbol id="icon-house-check" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
-        <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8m16 2-9-9-9 9"/>
+        <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M17 8v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8m16 2-9-9-9 9"/>
     </symbol>
 
     <svg id="icon-scissors" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 22">
-        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 3H3a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h7m4-16h1a2 2 0 0 1 2 2v1m0 10v1a2 2 0 0 1-2 2h-1m3-9v2M9 1v20"/>
+        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M10 3H3a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h7m4-16h1a2 2 0 0 1 2 2v1m0 10v1a2 2 0 0 1-2 2h-1m3-9v2M9 1v20"/>
     </svg>
 
     <symbol id="icon-calc" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 20">
-        <path fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="2" d="M1 1h14v16a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V1Z"/>
-        <path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M1 7h14M5 11h1M10 11h1M5 15h1M10 15h1"/>
+        <path fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="1" d="M1 1h14v16a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V1Z"/>
+        <path stroke="currentColor" stroke-linecap="round" stroke-width="1" d="M1 7h14M5 11h1M10 11h1M5 15h1M10 15h1"/>
     </symbol>
 
     <symbol id="icon-quality" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 20">
-        <path fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="2" d="M1.606 3.74 8 1l6.394 2.74a1 1 0 0 1 .606.92v6.858a6 6 0 0 1-3.023 5.21L8 19l-3.977-2.273A6 6 0 0 1 1 11.518V4.66a1 1 0 0 1 .606-.919Z"/>
+        <path fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="1" d="M1.606 3.74 8 1l6.394 2.74a1 1 0 0 1 .606.92v6.858a6 6 0 0 1-3.023 5.21L8 19l-3.977-2.273A6 6 0 0 1 1 11.518V4.66a1 1 0 0 1 .606-.919Z"/>
     </symbol>
 
     <symbol id="5tn" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 42 35">

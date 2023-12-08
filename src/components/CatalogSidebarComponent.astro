@@ -34,7 +34,7 @@ const links = [
 ---
 
 <aside>
-  <nav>
+  <!-- <nav>
     <ul>
       {
         links.map((link) => (
@@ -44,33 +44,59 @@ const links = [
         ))
       }
     </ul>
+  </nav> -->
+
+  <nav class="nav">
+    <svg width="80" height="40" class="active" data-tab-id="tab-1">
+      <use xlink:href="/images/sprites.svg#icon-elipse"></use>
+    </svg>
+
+    <svg width="80" height="60" data-tab-id="tab-2">
+      <use xlink:href="/images/sprites.svg#icon-circle"></use>
+    </svg>
+
+    <svg width="80" height="60" data-tab-id="tab-3">
+      <use xlink:href="/images/sprites.svg#icon-square"></use>
+    </svg>
+
+    <svg width="80" height="60" data-tab-id="tab-4">
+      <use xlink:href="/images/sprites.svg#icon-rectangle"></use>
+    </svg>
+
+    <svg width="80" height="60" data-tab-id="tab-5">
+      <use xlink:href="/images/sprites.svg#icon-circle-v2"></use>
+    </svg>
+
+    <svg width="80" height="60" data-tab-id="tab-6">
+      <use xlink:href="/images/sprites.svg#icon-rectangle-rounded"></use>
+    </svg>
   </nav>
 </aside>
 
 <style lang="scss">
   aside {
-    background-color: #f9f9f9;
-    border-radius: 25px;
-    box-shadow: 0 5px 5px rgba(20, 31, 51, 0.06);
-    padding: 40px 0;
-    width: 100%;
-    position: sticky;
-    top: 167px;
-
     nav {
-      ul {
-        display: grid;
-        gap: 1px;
+      background: #f9f9f9;
+      border-radius: 25px;
+      box-shadow: 0 5px 5px rgba(20, 31, 51, 0.06);
+      display: flex;
+      padding: 20px;
+      place-items: center;
+      place-content: space-between;
 
-        li {
-          padding: 10px 40px;
+      svg {
+        color: var(--c-default);
+        opacity: 0.1;
+        overflow: visible;
+        cursor: pointer;
 
-          &:hover {
-            background-color: var(--c-theme);
-            color: white;
-          }
-          a {
-          }
+        &:hover {
+          color: var(--c-theme);
+        }
+
+        &.active {
+          color: var(--c-theme);
+          opacity: 1;
         }
       }
     }
