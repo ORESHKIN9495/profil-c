@@ -1,5 +1,4 @@
 ---
-import CatalogSidebarComponent from "../components/CatalogSidebarComponent.astro";
 import CardCatalogComponent from "../components/sub-components/CardCatalogComponent.astro";
 import CrumbsComponent from "../components/sub-components/CrumbsComponent.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
@@ -8,52 +7,57 @@ const category = [
   {
     id: 1,
     name: "Труба круглая",
-    image: "/images/catalog/01.jpg",
+    image: "/images/catalog/05.jpg",
   },
   {
     id: 2,
-    name: "Труба мебельная тонкостенная",
-    image: "/images/catalog/01.jpg",
+    name: "Труба круглая электросварная тонкостенная",
+    image: "/images/catalog/06.jpg",
   },
   {
     id: 3,
-    name: "Труба водогазопроводная",
-    image: "/images/catalog/01.jpg",
+    name: "Труба мебельная тонкостенная",
+    image: "/images/catalog/13.jpg",
   },
   {
     id: 4,
-    name: "Труба прямоугольная",
-    image: "/images/catalog/01.jpg",
+    name: "Труба водогазопроводная",
+    image: "/images/catalog/07.jpg",
   },
   {
     id: 5,
-    name: "Труба оцинкованная",
-    image: "/images/catalog/01.jpg",
+    name: "Труба прямоугольная",
+    image: "/images/catalog/08.jpg",
   },
   {
     id: 6,
-    name: "Труба овальная",
-    image: "/images/catalog/01.jpg",
+    name: "Труба оцинкованная",
+    image: "/images/catalog/14.jpg",
   },
   {
     id: 7,
-    name: "Труба квадратная",
-    image: "/images/catalog/01.jpg",
+    name: "Труба овальная",
+    image: "/images/catalog/11.jpg",
   },
   {
     id: 8,
+    name: "Труба квадратная",
+    image: "/images/catalog/02.jpg",
+  },
+  {
+    id: 9,
     name: "Труба плоскоовальная",
     image: "/images/catalog/01.jpg",
   },
   {
-    id: 9,
+    id: 10,
     name: "Труба арочная",
-    image: "/images/catalog/01.jpg",
+    image: "/images/catalog/12.jpg",
   },
   {
-    id: 10,
+    id: 11,
     name: "Труба профильная",
-    image: "/images/catalog/01.jpg",
+    image: "/images/catalog/15.jpg",
   },
 ];
 ---
@@ -65,8 +69,6 @@ const category = [
     <h1>Каталог</h1>
 
     <p>В нашем каталоге представлены все виды труб, которые вы можете приобрести в нашем магазине.</p>
-
-    <CatalogSidebarComponent category="Трубы круглые" />
 
     <div>
       {category.map((item) => <CardCatalogComponent id={item.id} name={item.name} image={item.image} />)}
@@ -194,6 +196,19 @@ const category = [
 
       article {
         grid-column: 1 / -1;
+
+        h3,
+        h4 {
+          margin: 60px 0 20px;
+        }
+
+        ul {
+          padding: 20px;
+
+          li {
+            list-style: inside;
+          }
+        }
       }
     }
   </style>

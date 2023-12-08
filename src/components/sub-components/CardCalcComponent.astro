@@ -1,0 +1,50 @@
+---
+
+---
+
+<form action="">
+  <label>
+    Типоразмер
+    <select name="" id="">
+      <option value="" selected disabled hidden>Выбрать</option>
+      <option value="1">40x40</option>
+      <option value="2">60x60</option>
+    </select>
+  </label>
+
+  <label>
+    Толщ. стенки
+    <select name="" id="">
+      <option value="" selected disabled hidden>Выбрать</option>
+      <option value="1">40x40</option>
+      <option value="2">60x60</option>
+    </select>
+  </label>
+
+  <label>
+    Вес 1 п/м
+    <input type="text" value="1" />
+  </label>
+</form>
+
+<style lang="scss">
+  form {
+    background-color: #f9f9f9;
+    border-radius: 25px;
+    display: grid;
+    grid-template: auto / repeat(3, 1fr);
+    padding: 40px;
+
+    label {
+      display: grid;
+
+      select {
+        width: fit-content;
+        border: 1px solid #ccc;
+        padding: 5px 20px;
+        border-radius: 50px;
+        margin: 10px 0 0;
+      }
+    }
+  }
+</style>

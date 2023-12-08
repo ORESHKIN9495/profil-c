@@ -30,6 +30,25 @@ body {
   white-space: nowrap;
 }
 
+table {
+  border-spacing: 0;
+  border-collapse: collapse;
+  width: 100%;
+
+  thead {
+    background: #f9f9f9;
+  }
+  tbody tr:nth-child(2n) {
+    background: #f9f9f9;
+  }
+  th,
+  td {
+    padding: 10px 20px;
+    border: 2px solid white;
+    vertical-align: middle;
+  }
+}
+
 h1,
 h2,
 h3,
@@ -57,4 +76,27 @@ h4 {
 section {
   background-color: white;
   position: relative;
+}
+
+.markdown-content {
+  h4 {
+    margin: 20px 0;
+  }
+
+  p {
+    margin: 0 0 20px;
+  }
+
+  table {
+    background: #52a2db08;
+    margin: 60px 0;
+  }
+
+  ul {
+    padding: 20px;
+
+    li {
+      list-style: inside;
+    }
+  }
 }

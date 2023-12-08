@@ -1,4 +1,5 @@
 ---
+import CardCalcComponent from "../components/sub-components/CardCalcComponent.astro";
 import CrumbsComponent from "../components/sub-components/CrumbsComponent.astro";
 import BaseLayout from "./BaseLayout.astro";
 const { frontmatter } = Astro.props;
@@ -8,49 +9,29 @@ const { frontmatter } = Astro.props;
   <CrumbsComponent parent="Каталог" title={frontmatter.title} />
 
   <section>
-    <!-- ... -->
     <h1>{frontmatter.title}</h1>
-    <picture>
-      <img src="/images/catalog/01.jpg" alt="" />
-    </picture>
 
-    <p>{frontmatter.description}</p>
-    <ul>
-      <li>A - высота</li>
-      <li>B - ширина</li>
-      <li>S - толщина стенки, мм</li>
-    </ul>
+    <div>
+      <picture>
+        <img src="/images/catalog/01.jpg" alt="" />
+      </picture>
 
-    <a href="#" class="button">Сделать заказ</a>
+      <ul>
+        <li>A - высота</li>
+        <li>B - ширина</li>
+        <li>S - толщина стенки, мм</li>
+      </ul>
 
-    <form action="">
-      <label>
-        Типоразмер
-        <select name="" id="">
-          <option value="" selected disabled hidden>Выбрать</option>
-          <option value="1">40x40</option>
-          <option value="2">60x60</option>
-        </select>
-      </label>
+      <p>{frontmatter.description}</p>
 
-      <label>
-        Толщ. стенки
-        <select name="" id="">
-          <option value="" selected disabled hidden>Выбрать</option>
-          <option value="1">40x40</option>
-          <option value="2">60x60</option>
-        </select>
-      </label>
+      <a href="#" class="button">Сделать заказ</a>
+    </div>
 
-      <label>
-        Вес 1 п/м
-        <input type="text" value="1" />
-      </label>
-    </form>
+    <CardCalcComponent />
 
-    <slot />
-    <!-- Markdown content is injected here -->
-    <!-- ... -->
+    <article class="markdown-content">
+      <slot />
+    </article>
   </section>
 </BaseLayout>
 
@@ -62,15 +43,28 @@ const { frontmatter } = Astro.props;
     max-width: var(--t-max-width);
     padding: 100px 0;
 
-    form {
-      background-color: #f9f9f9;
-      border-radius: 25px;
+    div {
       display: grid;
-      grid-template: auto / repeat(3, 1fr);
-      padding: 40px;
+      grid-template: auto / repeat(2, 1fr);
+      place-items: start;
 
-      label {
-        display: grid;
+      picture {
+        grid-column: 2;
+        grid-row: 1 / 4;
+      }
+
+      ul {
+        padding: 20px;
+      }
+    }
+
+    h1 {
+      margin: 40px 0 0;
+    }
+
+    article {
+      h4 {
+        margin: 0 0 20px;
       }
     }
   }
