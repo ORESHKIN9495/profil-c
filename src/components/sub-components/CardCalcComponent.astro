@@ -5,25 +5,25 @@
 <form action="">
   <label>
     Типоразмер
-    <select name="" id="">
-      <option value="" selected disabled hidden>Выбрать</option>
-      <option value="1">40x40</option>
-      <option value="2">60x60</option>
+    <select id="wh">
+      <option selected disabled>Выбрать</option>
+      <option value="[30, 15]">30x15</option>
+      <option value="[40, 20]">40x20</option>
     </select>
   </label>
 
   <label>
     Толщ. стенки
-    <select name="" id="">
+    <select id="t">
       <option value="" selected disabled hidden>Выбрать</option>
-      <option value="1">40x40</option>
-      <option value="2">60x60</option>
+      <option value="0.7">0.7</option>
+      <option value="0.8">0.8</option>
     </select>
   </label>
 
   <label>
     Вес 1 п/м
-    <input type="text" value="1" />
+    <input type="text" id="mass" value="0" />
   </label>
 </form>
 
@@ -48,3 +48,89 @@
     }
   }
 </style>
+
+<script>
+  import { calculateSquarePipeMass } from "../../composables/useCalc";
+
+  const form = document.querySelector("form");
+  let w: HTMLInputElement = form.querySelector("#wh");
+  let t: HTMLInputElement = form.querySelector("#t");
+  const massInput: HTMLInputElement = form.querySelector("#mass");
+
+  form.addEventListener("change", () => {
+    let arr = JSON.parse(w.value);
+    let thinkness = JSON.parse(t.value);
+
+    const l = 1000; // длина в мм, для 1 погонного метра
+    const density = 7871; // плотность материала в кг/м^3
+    const mass = calculateSquarePipeMass(Number(arr[0]), Number(arr[1]), Number(thinkness), l, density);
+
+    massInput.value = (mass - 0.01).toFixed(3);
+  });
+
+  /*   function calculatePipeMass(widthMM, heightMM, wallThicknessMM, lengthMM, density) {
+    // Переводим миллиметры в метры
+    let widthM = widthMM / 1000;
+    let heightM = heightMM / 1000;
+    let wallThicknessM = wallThicknessMM / 1000;
+    let lengthM = lengthMM / 1000;
+
+    // Рассчитываем периметр поперечного сечения
+    let perimeterM = 2 * (widthM + heightM);
+
+    // Рассчитываем объем трубы
+    let volumeM3 = perimeterM * wallThicknessM * lengthM;
+
+    // Рассчитываем массу трубы
+    let massKG = volumeM3 * density;
+
+    // Возвращаем массу трубы
+    return massKG;
+  }
+
+  // Пример использования функции:
+  // ширина = 30мм, высота = 15мм, толщина стенки = 0.8мм, длинна = 1000мм, плотность материала = 7871кг/м^3
+  let mass = calculatePipeMass(40, 20, 1.0, 1000, 7871);
+  console.log(`Масса 1 погонного метра плоскоовальной трубы: ${mass.toFixed(3)} кг`); */
+
+  /*   function calculateOvalTubeMass(widthMM, heightMM, wallThicknessMM, lengthMM, densityKGm3) {
+    // Преобразование миллиметров в метры
+    let widthM = widthMM / 1000;
+    let heightM = heightMM / 1000;
+    let wallThicknessM = wallThicknessMM / 1000;
+    let lengthM = lengthMM / 1000;
+
+    // Расчет приближенного периметра овального сечения
+    let perimeterM = 2 * (widthM + heightM);
+
+    // Расчет объема на единицу длины
+    let volumeM3 = perimeterM * wallThicknessM * lengthM;
+
+    // Расчет массы
+    let massKG = volumeM3 * densityKGm3;
+    
+    Math.PI * 7850 * 0.8 * (10 - 0.8) * 1000
+
+    // Возвращение массы
+    return massKG;
+  }
+
+  // Пример использования функции:
+  // ширина = 40мм, высота = 20мм, толщина стенки = 1.2мм, длина = 1000мм, плотность материала = 7871 кг/м^3
+  let mass = calculateOvalTubeMass(40, 20, 1.2, 1000, 7850);
+  console.log(`Масса 1 погонного метра овальной трубы: ${mass.toFixed(3)} кг`); */
+  //   ширина = 40 мм = 0.040 м
+  // высота = 20 мм = 0.020 м
+  // толщина стенки = 1.2 мм = 0.0012 м
+  // длина = 1000 мм = 1 м
+  // плотность материала = 7871 кг/м³
+
+  let thickness = 0.0012;
+  let width = 0.04;
+  let height = 0.02;
+  let len = 1;
+  let count: any = (7850 / (7850 * 0.01346 * thickness * (width + height - 2.86 * thickness) * len)).toFixed(3);
+
+  let result = Math.round(1000 / count);
+  console.log(7850 * 10 * 1000);
+</script>
