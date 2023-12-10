@@ -3,7 +3,10 @@ const { id, name, image } = Astro.props;
 ---
 
 <article>
-  <img src={image} alt={name} />
+  <picture>
+    <img src={image} alt={name} />
+  </picture>
+
   <h5>{name}</h5>
   <a href="/">ГОСТ 10704-91 Скачать (348 Кб)</a>
   <a href=`/catalog/post-${id}` class="button">Перейти к товарам</a>
@@ -11,11 +14,24 @@ const { id, name, image } = Astro.props;
 
 <style lang="scss">
   article {
-    border: 1px solid #eeeeee;
     display: grid;
-    gap: 10px;
-    padding: 20px;
     place-items: center;
     text-align: center;
+
+    picture {
+      display: grid;
+      margin: 0 0 10px;
+      padding: 40px;
+      position: relative;
+
+      &::after {
+        background-color: var(--c-theme);
+        content: "";
+        height: 100%;
+        opacity: 0.2;
+        position: absolute;
+        width: 100%;
+      }
+    }
   }
 </style>

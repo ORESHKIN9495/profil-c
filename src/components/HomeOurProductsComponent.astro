@@ -98,12 +98,17 @@ const products = [
 <section>
   <h3>Наша процукция</h3>
 
-  <div>
+  <div class="carousel">
     {
       products.map((product) => (
         <CardProductComponent id={product.id} name={product.name} size={product.size} image={product.image} />
       ))
     }
+  </div>
+
+  <div class="buttons-group">
+    <button class="button__previous"></button>
+    <button class="button__next"></button>
   </div>
 
   <a href="/catalog" class="button">Посмотреть каталог</a>
@@ -122,10 +127,33 @@ const products = [
 
     div {
       display: flex;
-      gap: inherit;
-      max-width: var(--t-max-width);
-      margin: auto;
+      gap: 40px;
+      margin: 0 0 0 clamp(29%, 5vw, 30%);
       padding: 0 0 40px;
+      overflow: hidden;
+    }
+
+    .buttons-group {
+      gap: 10px;
+      margin: auto;
+      max-width: var(--t-max-width);
+
+      button {
+        background-color: var(--c-secondary);
+        border-radius: 25px;
+        cursor: pointer;
+        padding: 6px 30px;
+        margin: auto;
+
+        &:first-of-type {
+          background-color: #eeeeee;
+          padding: 6px 20px;
+        }
+
+        &:hover {
+          opacity: 0.6;
+        }
+      }
     }
 
     .button {
@@ -133,3 +161,47 @@ const products = [
     }
   }
 </style>
+
+<script>
+  // Забираем все слайды из контейнера
+  const slides = document.querySelectorAll(".carousel article") as NodeListOf<HTMLDivElement>;
+  // Вперед
+  const next = document.querySelector(".button__next");
+  // Текущий слайд
+  let current = 0;
+  // Всего слайдов в контейнере
+  let total = slides.length - 1;
+
+  let gap = 40;
+
+  next.addEventListener("click", function () {
+    // Проверяем является ли текущий слайд последним или сбрасываем состояние
+    if (current === total) {
+      current = 0;
+    } else {
+      current++;
+    }
+
+    // Смещаем слайд на ширину слайда + gap
+    slides.forEach((slide, index) => {
+      slide.style.transform = `translateX(calc(${slides[index].offsetWidth + gap}px * -${current}))`;
+    });
+  });
+
+  // Назад
+  const previous = document.querySelector(".button__previous");
+
+  previous.addEventListener("click", function () {
+    // Проверяем является ли текущий слайд первым или сбрасываем состояние
+    if (current === 0) {
+      current = total;
+    } else {
+      current--;
+    }
+
+    // Смещаем слайд на ширину слайда + gap
+    slides.forEach((slide, index) => {
+      slide.style.transform = `translateX(calc(${slides[index].offsetWidth + gap}px * -${current}))`;
+    });
+  });
+</script>
