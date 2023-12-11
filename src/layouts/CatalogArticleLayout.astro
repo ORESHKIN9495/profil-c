@@ -72,3 +72,14 @@ const { frontmatter } = Astro.props;
     }
   }
 </style>
+
+<script>
+  const modal = document.querySelector("#modal") as HTMLElement;
+
+  const toggleForm = (e: Event) => {
+    e.preventDefault();
+    modal.style.display = "grid";
+  };
+
+  document.querySelector(".button").addEventListener("click", toggleForm);
+</script>
