@@ -5,95 +5,95 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 const gallery = [
   {
     id: 1,
-    name: "image-1",
+    name: "/images/gallery/image-1.jpg",
   },
   {
     id: 2,
-    name: "image-2",
+    name: "/images/gallery/image-2.jpg",
   },
   {
     id: 3,
-    name: "image-3",
+    name: "/images/gallery/image-3.jpg",
   },
   {
     id: 4,
-    name: "image-4",
+    name: "/images/gallery/image-4.jpg",
   },
   {
     id: 5,
-    name: "image-5",
+    name: "/images/gallery/image-5.jpg",
   },
   {
     id: 6,
-    name: "image-6",
+    name: "/images/gallery/image-6.jpg",
   },
   {
     id: 7,
-    name: "image-7",
+    name: "/images/gallery/image-7.jpg",
   },
   {
     id: 8,
-    name: "image-8",
+    name: "/images/gallery/image-8.jpg",
   },
   {
     id: 9,
-    name: "image-9",
+    name: "/images/gallery/image-9.jpg",
   },
   {
     id: 10,
-    name: "image-10",
+    name: "/images/gallery/image-10.jpg",
   },
   {
     id: 11,
-    name: "image-11",
+    name: "/images/gallery/image-11.jpg",
   },
   {
     id: 12,
-    name: "image-12",
+    name: "/images/gallery/image-12.jpg",
   },
   {
     id: 13,
-    name: "image-13",
+    name: "/images/gallery/image-13.jpg",
   },
   {
     id: 14,
-    name: "image-14",
+    name: "/images/gallery/image-14.jpg",
   },
   {
     id: 15,
-    name: "image-15",
+    name: "/images/gallery/image-15.jpg",
   },
   {
     id: 16,
-    name: "image-16",
+    name: "/images/gallery/image-16.jpg",
   },
   {
     id: 17,
-    name: "image-17",
+    name: "/images/gallery/image-17.jpg",
   },
   {
     id: 18,
-    name: "image-18",
+    name: "/images/gallery/image-18.jpg",
   },
   {
     id: 19,
-    name: "image-19",
+    name: "/images/gallery/image-19.jpg",
   },
   {
     id: 20,
-    name: "image-20",
+    name: "/images/gallery/image-20.jpg",
   },
   {
     id: 21,
-    name: "image-21",
+    name: "/images/gallery/image-21.jpg",
   },
   {
     id: 22,
-    name: "image-22",
+    name: "/images/gallery/image-22.jpg",
   },
   {
     id: 23,
-    name: "image-23",
+    name: "/images/gallery/image-23.jpg",
   },
 ];
 ---
@@ -169,15 +169,20 @@ const gallery = [
 
     <h3>Фотогалерея</h3>
 
-    <article>
-      <picture>
-        {gallery.map((item) => <img src={"/images/gallery/" + item.name + ".jpg"} alt="" />).slice(0, 12)}
-      </picture>
+    <div class="carousel">
+      {
+        gallery.map((item) => (
+          <picture>
+            <img src={item.name} alt="" />
+          </picture>
+        ))
+      }
+    </div>
 
-      <picture>
-        {gallery.map((item) => <img src={"/images/gallery/" + item.name + ".jpg"} alt="" />).slice(12, 23)}
-      </picture>
-    </article>
+    <div class="buttons-group">
+      <button class="button__previous"></button>
+      <button class="button__next"></button>
+    </div>
   </section>
 </BaseLayout>
 
@@ -200,7 +205,7 @@ const gallery = [
       grid-template: auto / repeat(2, 1fr);
       gap: 20px;
 
-      &:nth-of-type(2) {
+      &:last-of-type {
         grid-template: auto / 1fr;
 
         p {
@@ -209,16 +214,51 @@ const gallery = [
           gap: 20px;
         }
       }
+    }
 
-      &:last-of-type {
-        grid-template: auto / 1fr;
-        overflow: auto;
-        scrollbar-color: darkgrey #ffffff;
-        scrollbar-width: thin;
+    div {
+      display: flex;
+      gap: 40px;
+      overflow: hidden;
+      padding: 0 0 40px;
 
-        picture {
-          display: flex;
-          gap: 20px;
+      picture {
+        &.active {
+          background-color: rgba(81, 162, 219, 0.5);
+          backdrop-filter: blur(3px);
+          display: grid;
+          inset: 0;
+          place-items: center;
+          position: fixed;
+          transform: none !important;
+          z-index: 8;
+          scale: 3;
+        }
+
+        img {
+          max-inline-size: none;
+        }
+      }
+    }
+
+    .buttons-group {
+      gap: 10px;
+      max-width: var(--t-max-width);
+      justify-content: center;
+
+      button {
+        background-color: var(--c-secondary);
+        border-radius: 25px;
+        cursor: pointer;
+        padding: 6px 30px;
+
+        &:first-of-type {
+          background-color: #eeeeee;
+          padding: 6px 20px;
+        }
+
+        &:hover {
+          opacity: 0.6;
         }
       }
     }
@@ -229,7 +269,7 @@ const gallery = [
       article {
         grid-template: auto / 1fr;
 
-        &:nth-of-type(2) {
+        &:last-of-type {
           p {
             grid-template: auto / 1fr;
           }
@@ -238,3 +278,57 @@ const gallery = [
     }
   }
 </style>
+
+<script>
+  // Забираем все слайды из контейнера
+  const slides = document.querySelectorAll(".carousel picture") as NodeListOf<HTMLDivElement>;
+  // Вперед
+  const next = document.querySelector(".button__next");
+  // Текущий слайд
+  let current = 0;
+  // Всего слайдов в контейнере
+  let total = slides.length - 1;
+
+  let gap = 40;
+
+  next.addEventListener("click", function () {
+    // Проверяем является ли текущий слайд последним или сбрасываем состояние
+    if (current === total) {
+      current = 0;
+    } else {
+      current++;
+    }
+
+    // Смещаем слайд на ширину слайда + gap
+    slides.forEach((slide, index) => {
+      slide.style.transform = `translateX(calc(${slides[index].offsetWidth + gap}px * -${current}))`;
+    });
+  });
+
+  // Назад
+  const previous = document.querySelector(".button__previous");
+
+  previous.addEventListener("click", function () {
+    // Проверяем является ли текущий слайд первым или сбрасываем состояние
+    if (current === 0) {
+      current = total;
+    } else {
+      current--;
+    }
+
+    // Смещаем слайд на ширину слайда + gap
+    slides.forEach((slide, index) => {
+      slide.style.transform = `translateX(calc(${slides[index].offsetWidth + gap}px * -${current}))`;
+    });
+  });
+
+  slides.forEach((slide) => {
+    slide.addEventListener("click", () => {
+      if (slide.classList.contains("active")) {
+        slide.classList.remove("active");
+      } else {
+        slide.classList.add("active");
+      }
+    });
+  });
+</script>
