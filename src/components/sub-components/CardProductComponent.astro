@@ -1,9 +1,9 @@
 ---
-const { id, name, size, image } = Astro.props;
+const { id, name, size, image, link } = Astro.props;
 ---
 
 <article class="js-carousel-item">
-  <a href="#">
+  <a href={link}>
     <picture>
       <img src={image} alt="" />
     </picture>

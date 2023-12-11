@@ -1,0 +1,53 @@
+---
+
+---
+
+<form action="#">
+  <label>
+    ФИО
+    <input type="text" />
+  </label>
+
+  <label>
+    Телефон
+    <input type="text" />
+  </label>
+
+  <label>
+    Эл.почта
+    <input type="text" />
+  </label>
+
+  <label>
+    Предполагаемый объем заказа
+    <input type="text" />
+  </label>
+
+  <label>
+    Комментарий
+    <textarea name="" id="" cols="30" rows="5"></textarea>
+  </label>
+</form>
+
+<style lang="scss">
+  form {
+    background-color: red;
+    display: grid;
+    grid-template: auto / repeat(2, 1fr);
+    margin: auto;
+    max-width: 720px;
+    max-height: 720px;
+    padding: 40px;
+    position: fixed;
+    inset: 0;
+
+    label {
+      &:first-child {
+        grid-column: 1 / -1;
+      }
+      &:last-child {
+        grid-column: 1 / -1;
+      }
+    }
+  }
+</style>

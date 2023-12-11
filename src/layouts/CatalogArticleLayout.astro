@@ -1,6 +1,7 @@
 ---
 import CardCalcComponent from "../components/sub-components/CardCalcComponent.astro";
 import CrumbsComponent from "../components/sub-components/CrumbsComponent.astro";
+import FormModalComponent from "../components/sub-components/FormModalComponent.astro";
 import BaseLayout from "./BaseLayout.astro";
 const { frontmatter } = Astro.props;
 ---
@@ -13,7 +14,7 @@ const { frontmatter } = Astro.props;
 
     <div>
       <picture>
-        <img src="/images/catalog/01.jpg" alt="" />
+        <img src={frontmatter.image} alt={frontmatter.title} />
       </picture>
 
       <ul>
@@ -28,6 +29,8 @@ const { frontmatter } = Astro.props;
     </div>
 
     <CardCalcComponent />
+
+    <FormModalComponent />
 
     <article class="markdown-content">
       <slot />

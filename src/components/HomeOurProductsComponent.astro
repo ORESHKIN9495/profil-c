@@ -7,90 +7,77 @@ const products = [
     name: "Труба плоскоовальная",
     size: "10x10",
     image: "/images/catalog/01.jpg",
+    link: "/catalog/post-9",
   },
   {
     id: 2,
     name: "Труба квадратная",
     size: "10x10",
     image: "/images/catalog/02.jpg",
+    link: "/catalog/post-8",
   },
   {
     id: 3,
-    name: "Труба квадратная",
+    name: "Труба профильная",
     size: "10x10",
-    image: "/images/catalog/03.jpg",
+    image: "/images/catalog/04.jpg",
+    link: "/catalog/post-11",
   },
   {
     id: 4,
-    name: "Труба квадратная",
-    size: "10x10",
-    image: "/images/catalog/04.jpg",
-  },
-  {
-    id: 5,
     name: "Труба круглая",
     size: "10x10",
     image: "/images/catalog/05.jpg",
+    link: "/catalog/post-1",
+  },
+  {
+    id: 5,
+    name: "Труба круглая электросварная тонкостенная",
+    size: "10x10",
+    image: "/images/catalog/06.jpg",
+    link: "/catalog/post-2",
   },
   {
     id: 6,
-    name: "Труба круглая",
+    name: "Труба круглая водогазопроводная",
     size: "10x10",
-    image: "/images/catalog/06.jpg",
+    image: "/images/catalog/07.jpg",
+    link: "/catalog/post-4",
   },
   {
     id: 7,
-    name: "Труба круглая",
-    size: "10x10",
-    image: "/images/catalog/07.jpg",
-  },
-  {
-    id: 8,
     name: "Труба прямоугольная",
     size: "10x10",
     image: "/images/catalog/08.jpg",
+    link: "/catalog/post-5",
   },
   {
-    id: 9,
-    name: "Труба прямоугольная",
-    size: "10x10",
-    image: "/images/catalog/09.jpg",
-  },
-  {
-    id: 10,
-    name: "Труба прямоугольная",
-    size: "10x10",
-    image: "/images/catalog/10.jpg",
-  },
-  {
-    id: 11,
+    id: 8,
     name: "Труба овальная",
     size: "10x10",
     image: "/images/catalog/11.jpg",
+    link: "/catalog/post-7",
   },
   {
-    id: 12,
+    id: 9,
     name: "Труба арочная",
     size: "10x10",
     image: "/images/catalog/12.jpg",
+    link: "/catalog/post-10",
   },
   {
-    id: 13,
+    id: 10,
     name: "Труба мебельная тонкостенная",
     size: "10x10",
     image: "/images/catalog/13.jpg",
+    link: "/catalog/post-3",
   },
   {
-    id: 14,
+    id: 11,
     name: "Труба оцинкованная",
     size: "10x10",
     image: "/images/catalog/14.jpg",
-  },
-  {
-    id: 15,
-    name: "Труба профильная",
-    size: "10x10",
-    image: "/images/catalog/15.jpg",
+    link: "/catalog/post-6",
   },
 ];
 ---
@@ -101,7 +88,13 @@ const products = [
   <div class="carousel">
     {
       products.map((product) => (
-        <CardProductComponent id={product.id} name={product.name} size={product.size} image={product.image} />
+        <CardProductComponent
+          id={product.id}
+          name={product.name}
+          size={product.size}
+          image={product.image}
+          link={product.link}
+        />
       ))
     }
   </div>
